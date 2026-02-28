@@ -1,0 +1,952 @@
+/* =========================================
+   [ 1 ] FUENTES Y COLORES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap');
+
+:root {
+  --header-height: 3.5rem;
+  --main-red: #A52024;
+  --dark-color: #000000;
+  --white-color: #FFFFFF;
+  --text-color: #E0E0E0;
+  --body-bg: #101010;
+
+  --body-font: 'Lato', sans-serif;
+  --title-font: 'Bebas Neue', cursive;
+
+  --h1-font-size: 2.5rem; /* Ajustado para móvil */
+  --h2-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  
+  --font-bold: 700;
+}
+
+/* =========================================
+   [ 2 ] BASE + FONDO PRINCIPAL (Watermark)
+   ========================================= */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative; /* Necesario para que el ::before tome el 100% de la altura */
+}
+
+/* ===================================================================
+   IMPLEMENTACIÓN CLAVE: PSEUDO-ELEMENTO PARA MARCA DE AGUA
+   =================================================================== */
+html::before {
+    content: '';
+    position: fixed; /* Fijo en la ventana de visualización */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* RUTA y PROPIEDADES del logo */
+    background-image: url('img/logofondo.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* TAMAÑO MEDIANO SOLICITADO */
+    background-size: 500px; /* Tamaño fijo, puedes ajustar este valor (ej: 600px o 40vw) */
+    
+    /* OPACIDAD BAJA (Ajusta este valor si lo quieres más visible) */
+    opacity: 0.8; 
+    
+    /* CAPA INFERIOR: Se asegura de que esté detrás de todo el contenido del body */
+    z-index: -100; 
+}
+
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  overflow-x: hidden;
+  
+  /* REVERTIDO: ELIMINAMOS background-image y opacity del body. */
+  background-image: none; 
+  opacity: 1; /* Esto es el valor por defecto, pero lo dejamos claro. */
+}
+
+h1, h2, h3 {
+  color: var(--white-color);
+  font-family: var(--title-font);
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--main-red);
+}
+
+.main {
+  overflow: hidden; 
+}
+
+/* =========================================
+   [ 3 ] HEADER & NAV
+   ========================================= */
+.header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: .3s; 
+}
+
+/* Fondo oscuro al hacer scroll (JS agrega esta clase) */
+.scroll-header {
+  background-color: var(--dark-color);
+  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.3);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav__logo {
+  color: var(--white-color);
+  font-family: var(--title-font);
+  font-size: 1.2rem;
+}
+.nav__logo span {
+  color: var(--main-red);
+}
+
+.nav__toggle, .nav__close {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* Menú Móvil */
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    background-color: var(--dark-color);
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+  }
+  
+  .show-menu {
+    top: 0;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+  font-family: 'Lato', sans-serif; 
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  transition: .3s;
+}
+
+.nav__link:hover, .active-link {
+  color: var(--main-red);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* =========================================
+   [ 4 ] INICIO & CARRUSEL
+   ========================================= */
+.inicio {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  align-items: center;
+}
+
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeLoop 20s infinite; 
+}
+
+.carousel-slide:nth-child(1) { animation-delay: 0s; }
+.carousel-slide:nth-child(2) { animation-delay: 5s; }
+.carousel-slide:nth-child(3) { animation-delay: 10s; }
+.carousel-slide:nth-child(4) { animation-delay: 15s; }
+
+@keyframes fadeLoop {
+    0% { opacity: 0; transform: scale(1.1); }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; transform: scale(1); }
+    100% { opacity: 0; }
+}
+
+.inicio__container {
+    position: relative;
+    z-index: 1;
+}
+
+.inicio__data {
+  text-align: center;
+}
+.inicio__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+}
+.inicio__description {
+  margin-bottom: 2.5rem;
+}
+
+/* =========================================
+   [ 5 ] BOTONES
+   ========================================= */
+.button {
+  display: inline-block;
+  background-color: var(--main-red);
+  color: var(--white-color);
+  padding: 1rem 1.75rem;
+  font-weight: var(--font-bold);
+  transition: .3s;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px hsla(0, 79%, 38%, 0.4);
+}
+.button-dark {
+    background-color: #222;
+}
+.button-dark:hover {
+    background-color: var(--dark-color);
+    box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.4);
+}
+.button-small {
+  padding: .75rem 1rem;
+  font-size: var(--small-font-size);
+}
+
+/* =========================================
+   [ 6 ] HORARIOS
+   ========================================= */
+.horarios__container {
+    overflow-x: auto;
+}
+.horarios__table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    min-width: 600px;
+}
+.horarios__table th, .horarios__table td {
+    padding: 1rem .5rem;
+    border: 1px solid #443e3e;
+}
+/* --- DISEÑO LIMPIO PARA LA COLUMNA DE HORA --- */
+.horarios__table td:first-child {
+    /* 1. Fondo sólido para tapar el logo (Obligatorio para que se lea) */
+    background-color: #1a1a1a; 
+    
+    /* 2. Borde estándar: Igual al del resto de la tabla (Gris oscuro/marrón) */
+    border: 1px solid #443e3e; /* Reemplaza la barra roja por el borde normal */
+    
+    /* 3. Estilo de texto: Normalizado */
+    color: var(--text-color); /* Usa el mismo gris claro del resto de textos */
+    font-family: var(--body-font); /* Fuente normal (Lato), no la de títulos */
+    font-weight: normal; /* Quita la negrita extra */
+    font-size: 1rem; /* Tamaño normal */
+    
+    /* Mantenemos el "sticky" porque es muy útil en celular, pero sin destacar tanto */
+    position: sticky;
+    left: 0;
+    z-index: 10;
+}
+.horarios__table th {
+    background-color: #1a1a1a;
+    font-family: var(--title-font);
+    letter-spacing: 1px;
+}
+.clase-general { background-color: #000000; }
+.clase-ninos { background-color: #440000; }
+.clase-seleccionados {
+    background-color: lab(32.3% 79.2 -107.86 / 0.227);
+    color: #adadad;
+    font-weight: bold;
+}
+
+.horarios__leyenda {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.color-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Estilos para columna de Sábados */
+.horarios__grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.horarios__table--semana {
+    flex-grow: 1;
+    width: auto;
+}
+
+.horarios__sabado-columna {
+    width: 200px;
+    background-color: #a01f1f;
+    color: white;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.horarios__sabado-titulo {
+    background-color: #831a1a;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+/* Media Query para horarios en móvil */
+@media (max-width: 768px) {
+    .horarios__grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .horarios__sabado-columna {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   [ 7 ] PAQUETES, PERSONALIZADOS Y CITAS (TARJETAS)
+   ========================================= */
+.pagos__container,
+.personalizados__container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.pago__card,
+.personalizados__card,
+.cita__card { 
+    background-color: #1c1c1c;
+    padding: 1.5rem 1rem; 
+    text-align: center;
+    border: 1px solid transparent;
+    transition: .3s;
+    border-radius: 8px;
+    
+    position: relative; 
+    z-index: 1; 
+}
+
+.pago__card:hover,
+.personalizados__card:hover {
+    border-color: var(--main-red);
+    transform: translateY(-5px);
+}
+
+.pago__icon,
+.personalizados__icon {
+    font-size: 2.5rem;
+    color: var(--main-red);
+    margin-bottom: 0.75rem;
+}
+
+.pago__title,
+.personalizados__title,
+.cita__title {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+/* Espacio entre textos */
+.pago__card p,
+.personalizados__card p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.pagos__info {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: var(--small-font-size);
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   [ 8 ] EFECTO LOGO EN FONDO - LIMPIEZA TARJETAS
+   ========================================= */
+
+/* Se limpian los pseudo-elementos usados antes en las tarjetas */
+.pago__card::before,
+.personalizados__card::before,
+.cita__card::before {
+    content: none; 
+}
+
+/* Aseguramos que las tarjetas de la Tienda NO tengan fondo */
+.producto__card {
+    background-image: none;
+}
+
+
+/* =========================================
+   [ 9 ] CITAS (ESTILOS ESPECÍFICOS)
+   ========================================= */
+.citas__container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cita__card {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+.cita__description {
+    margin-bottom: 1.5rem;
+}
+.cita__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.button-contact {
+    color: var(--white-color);
+    background-color: #333;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    transition: .3s;
+}
+.button-contact:hover {
+    background-color: var(--main-red);
+}
+
+/* =========================================
+   [ 10 ] TIENDA
+   ========================================= */
+.tienda__container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+.producto__card {
+    background-color: var(--dark-color);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .3s;
+    border: 1px solid #333;
+}
+.producto__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px hsla(0, 0%, 0%, 0.4);
+    border-color: var(--main-red);
+}
+.producto__img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #000;
+}
+.producto__title {
+    font-size: 1.25rem;
+    margin-bottom: .25rem;
+}
+.producto__price {
+    display: block;
+    color: var(--main-red);
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+}
+
+/* =========================================
+   [ 11 ] FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--dark-color);
+    padding-top: 4rem;
+}
+.footer__container {
+    border-bottom: 1px solid #333;
+    padding-bottom: 3rem;
+}
+.footer__content {
+    display: grid;
+    gap: 2rem;
+}
+.footer__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--main-red);
+}
+.footer__description i {
+    color: var(--main-red);
+    margin-right: .5rem;
+}
+.footer__social {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer__social-link {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: .3s;
+}
+.footer__social-link:hover {
+    color: var(--main-red);
+}
+.footer__copy {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: var(--small-font-size);
+}
+.footer__map iframe {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* =========================================
+   [ 12 ] MODAL (VENTANA EMERGENTE)
+   ========================================= */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  padding-top: 50px;
+}
+
+.modal-contenido {
+  background-color: #101010;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid var(--main-red);
+  width: 90%; 
+  max-width: 450px; 
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(165, 32, 36, 0.2);
+}
+
+.modal-contenido label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--white-color);
+}
+
+.modal-contenido select, 
+.modal-contenido input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: white;
+  border-radius: 6px;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cerrar:hover { color: var(--main-red); }
+
+/* Estilos de Botón de WhatsApp dentro del Modal */
+.modal-contenido .button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--dark-color); 
+    color: var(--white-color);           
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+#opcion-onzas {
+    display: none;
+}
+
+/* Efecto al pasar el ratón (Hover) */
+.modal-contenido .button:hover {
+    background-color: #800c0c79; 
+    color: var(--white-color);
+}
+
+/* =========================================
+   [ 13 ] MEDIA QUERIES (ADAPTACIÓN PC)
+   ========================================= */
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    position: initial;
+    box-shadow: none;
+  }
+  .nav__list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .nav__toggle, .nav__close {
+    display: none;
+  }
+  .nav__link {
+    background: transparent; 
+    margin: 0;
+  }
+  .nav__link:hover, .active-link {
+    background: transparent;
+    transform: none;
+  }
+
+  .inicio__title {
+      font-size: 4.5rem;
+  }
+  .footer__content {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  /* Ajuste para que el menú no se amontone con el logo */
+  .nav__list {
+    gap: 2.5rem;
+  }
+}
+
+/* ---  AGREGAR A STYLE.CSS --- */
+
+/* Estilos Grid para separar el Sábado */
+.horarios__grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.horarios__table--semana {
+    flex-grow: 1;
+    width: auto;
+}
+.horarios__sabado-columna {
+    width: 200px;
+    background-color: #a01f1f;
+    color: white;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.horarios__sabado-titulo {
+    background-color: #831a1a;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.horarios__sabado-clase { padding: 0 10px; }
+.horarios__sabado-hora { font-weight: bold; margin-bottom: 5px; }
+
+/* Color para Seleccionados */
+.clase-seleccionados {
+    background-color: #000275; /* Amarillo/Dorado */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Ocultar modelo por defecto en el modal */
+#opcion-modelo { display: none; }
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .horarios__grid { flex-direction: column; }
+    .horarios__sabado-columna { width: 100%; }
+}
+.pagos__info-container h3 {
+  /* Fondo negro con 60% de opacidad (se ve lo de atrás oscurecido) */
+  background-color: rgba(0, 0, 0, 0.6);
+  
+  /* EL TRUCO: Desenfoca la imagen que está detrás del texto */
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); /* Para soporte en Safari/iOS */
+
+  /* Estética */
+  border-radius: 15px; /* Bordes redondeados, más amigable */
+  padding: 20px 40px; /* Dale aire al texto, que no se sienta apretado */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Un borde muy sutil */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
+  
+  display: inline-block;
+  color: #fff;
+}
+/* =========================================
+   ESTILOS DE LA MINI GALERÍA (CORREGIDO)
+   ========================================= */
+
+/* 1. El Contenedor: Define el tamaño y oculta lo que sobra */
+.mini-galeria__contenedor {
+    position: relative; /* Necesario para que los hijos absolutos se guíen de aquí */
+    height: 250px;      /* ALTURA FIJA: Sin esto, colapsa a 0px */
+    width: 100%;
+    overflow: hidden;   /* Oculta las imágenes que están a los lados */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+}
+
+/* 2. El Riel: Contiene las imágenes */
+.mini-galeria__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* Quitamos el transition aquí para que JS lo maneje si es necesario, 
+       pero lo dejamos para suavidad básica */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 3. Las Slides: AQUÍ ESTÁ LA CLAVE PARA QUE NO SEA LISTA */
+.mini-galeria__slide {
+    position: absolute; /* Esto las saca del flujo normal y las encima */
+    top: 0;
+    left: 0;            /* Todas empiezan en la izquierda */
+    width: 100%;
+    height: 100%;
+}
+
+.mini-galeria__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 'Contain' para que se vea todo el guante, 'cover' si quieres llenar todo */
+}
+
+/* 4. Botones */
+.mini-galeria__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(165, 32, 36, 0.7); /* Usando el rojo de tu marca */
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-galeria__btn:hover {
+    background: rgba(165, 32, 36, 1);
+}
+
+.mini-galeria__btn--izq { left: 10px; }
+.mini-galeria__btn--der { right: 10px; }
+
+.oculto { display: none; }
+/* Esto asegura que la lista también tenga el estilo de cristal */
+.pagos__info-container ul {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 20px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  display: inline-block;
+  color: #fff;
+  text-align: left; /* Las listas se leen mejor alineadas a la izquierda */
+  list-style: none; /* Quita los puntos por defecto si prefieres usar emojis */
+}
+
+.pagos__info-container ul li {
+    margin-bottom: 8px; /* Separación entre líneas */
+    font-size: 1.1rem; /* Tamaño de letra más cómodo para leer */
+}
+/* =========================================
+   AJUSTE DE LOGO EN ESCRITORIO
+   ========================================= */
+@media screen and (min-width: 1024px) {
+  /* Seleccionamos la barra de navegación */
+  .nav {
+    /* 1. Rompemos el límite de 1024px */
+    max-width: 100% !important; 
+    
+    /* 2. Quitamos el centrado automático */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    /* 3. Agregamos un poco de aire a los lados para que no pegue con el borde del monitor */
+    padding-left: 3rem;  /* Ajusta este número para moverlo más o menos a la izquierda */
+    padding-right: 3rem; /* Lo mismo para el menú de la derecha */
+  }
+}
+/* =========================================
+   CORRECCIÓN VIDEO TIENDA (PLAYERA)
+   ========================================= */
+.producto__card video.producto__img {
+    /* 1. Aumentamos la altura solo para el video */
+    height: 250px; /* Doble de altura que las fotos normales */
+    
+    /* 2. Ajuste de visualización */
+    object-fit: cover; /* Usa 'cover' para que llene todo el cuadro sin bordes negros */
+    /* Si el video se ve cortado, cambia 'cover' por 'contain' */
+    
+    /* 3. Aseguramos que se vea nítido */
+    background-color: #000;
+}
+/* Estilo del texto "Desarrollado por..." */
+.footer__dev {
+    font-size: 0.75rem; /* Un poco más pequeño que el copy normal */
+    color: #888; /* Gris tenue para no distraer */
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* Estilo de tu Nombre (el enlace) */
+.footer__dev a {
+    color: var(--white-color); /* Tu nombre en blanco para resaltar un poco */
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre tu nombre */
+.footer__dev a:hover {
+    color: var(--main-red); /* Se pone rojo (color de la marca) al tocarlo */
+    text-shadow: 0 0 8px rgba(165, 32, 36, 0.6); /* Un pequeño brillo */
+}
+/* Título limpio para listas (Sin fondo de vidrio) */
+.titulo-lista-limpio {
+    font-family: var(--title-font); /* Usa tu fuente Bebas Neue */
+    font-size: 1.5rem;              /* Mismo tamaño que personalizados__title */
+    color: var(--white-color);      /* Color blanco */
+    margin-bottom: 0.5rem;          /* Espacio abajo */
+    letter-spacing: 1px;            /* Espaciado de letras elegante */
+    line-height: 1.2;
+}
