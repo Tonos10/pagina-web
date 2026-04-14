@@ -103,17 +103,26 @@ function abrirModal(nombreProducto) {
     // Lógica condicional
     const esTipoGuantes = esGuante(nombreProducto);
     const esTipoTalla = necesitaTalla(nombreProducto);
+    const esTipoPlayera = nombreProducto.toLowerCase().includes('playera');
 
     if (esTipoGuantes) {
         // GUANTES: Onzas y Modelo (SIN Color)
         if (opcionOnzas) opcionOnzas.style.display = 'block';
         if (selectOnzas) selectOnzas.setAttribute('required', 'required');
 
-        if (opcionModelo) opcionModelo.style.display = 'block'; 
-        if (selectModelo) selectModelo.setAttribute('required', 'required'); 
+        if (opcionModelo) opcionModelo.style.display = 'block';
+        if (selectModelo) selectModelo.setAttribute('required', 'required');
         
+    } else if (esTipoPlayera) {
+        // PLAYERA: Talla + Color
+        if (opcionTalla) opcionTalla.style.display = 'block';
+        if (selectTalla) selectTalla.setAttribute('required', 'required');
+
+        if (opcionColor) opcionColor.style.display = 'block';
+        if (selectColor) selectColor.setAttribute('required', 'required');
+
     } else if (esTipoTalla) {
-        // ROPA: Talla
+        // Otras prendas: solo Talla
         if (opcionTalla) opcionTalla.style.display = 'block';
         if (selectTalla) selectTalla.setAttribute('required', 'required');
         

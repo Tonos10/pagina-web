@@ -31,6 +31,7 @@
                     <li class="nav__item"><a href="#personalizados" class="nav__link">Personalizados</a></li> 
                     <li class="nav__item"><a href="#citas" class="nav__link">Citas</a></li>
                     <li class="nav__item"><a href="#tienda" class="nav__link">Tienda</a></li>
+                    <li class="nav__item"><a href="pagos/index.html" class="nav__link">Pagar en línea</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
             </div>
@@ -43,10 +44,10 @@
         
         <section class="inicio" id="inicio">
            <div class="carousel-container">
-                <div class="carousel-slide" style="background-image: url('img/fondo1.webp');"></div>
                 <div class="carousel-slide" style="background-image: url('img/fondo2.webp');"></div>
-                <div class="carousel-slide" style="background-image: url('img/fondo3.webp');"></div>
-                <div class="carousel-slide" style="background-image: url('img/fondo4.webp');"></div>
+                <div class="carousel-slide" style="background-image: url('img/1.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('img/2.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('img/3.jpg');"></div>
             </div>
 
             <div class="inicio__container Scontainer grid">
@@ -326,7 +327,6 @@
                 <li class="mini-galeria__slide">
                     <img src="img/tienda/Rosa.webp" alt="Vista 5" class="producto__img">
                 </li>
-            </li>
         </ul>
         
         <button class="mini-galeria__btn mini-galeria__btn--izq oculto">
@@ -345,13 +345,28 @@
 </div>
                 
                 <div class="producto__card">
-                    <video class="producto__img" autoplay muted loop playsinline>
-                        <source src="img/tienda/playera-optimizada.webm" type="video/webm">
-                        <source src="img/tienda/playerav.mp4" type="video/mp4">
-                        Tu navegador no soporta videos.
-                    </video>
+                    <div class="mini-galeria__contenedor js-mini-galeria">
+                        <ul class="mini-galeria__track">
+                            <li class="mini-galeria__slide">
+                                <video src="img/tienda/playerav.webm" class="producto__img" autoplay muted loop>
+                                    Su navegador no admite este formato de video.
+                                </video>
+                            </li>
+                            <li class="mini-galeria__slide">
+                                <video src="img/tienda/roja.webm" class="producto__img" autoplay muted loop>
+                                    Su navegador no admite este formato de video.
+                                </video>
+                            </li>
+                        </ul>
+                        <button class="mini-galeria__btn mini-galeria__btn--izq oculto">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="mini-galeria__btn mini-galeria__btn--der">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                     
-                    <h3 class="producto__title">Playera Oficial (con tu nombre)</h3>
+                    <h3 class="producto__title">Playera Oficial</h3>
                     <span class="producto__price">$350.00 MXN</span>
                     <button class="button button-small" onclick="abrirModal('Playera Oficial')">
                         <i class="fas fa-shopping-cart"></i> Añadir
@@ -456,10 +471,8 @@
                 <label for="color">Color:</label>
                 <select id="color" name="color">
                     <option value="">Selecciona un color</option>
-                    <option value="Rojo">Rojo</option>
                     <option value="Negro">Negro</option>
-                    <option value="Azul">Azul</option>
-                    <option value="Verde">Verde</option>
+                    <option value="Rojo">Rojo</option>
                 </select>
             </div>
             

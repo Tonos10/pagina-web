@@ -661,6 +661,12 @@ img, video {
     gap: 2rem;
 }
 
+@media (max-width: 768px) {
+    .tienda__container {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Tarjeta de producto de la tienda */
 .producto__card {
     background-color: var(--dark-color);
@@ -750,12 +756,22 @@ img, video {
     left: 0;            /* Todas empiezan en la izquierda */
     width: 100%;
     height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
 }
 
-.mini-galeria__slide img {
+.mini-galeria__slide.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mini-galeria__slide img,
+.mini-galeria__slide video {
     width: 100%;
     height: 100%;
     object-fit: contain; /* 'Contain' para que se vea todo el guante */
+    display: block;
 }
 
 /* Botones de navegación izquierda/derecha */
@@ -1932,12 +1948,22 @@ img, video {
     left: 0;            /* Todas empiezan en la izquierda */
     width: 100%;
     height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
 }
 
-.mini-galeria__slide img {
+.mini-galeria__slide.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mini-galeria__slide img,
+.mini-galeria__slide video {
     width: 100%;
     height: 100%;
     object-fit: contain; /* 'Contain' para que se vea todo el guante, 'cover' si quieres llenar todo */
+    display: block;
 }
 
 /* 4. Botones */
