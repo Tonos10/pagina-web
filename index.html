@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZTECA THAI BOXING - Forjando Guerreros</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo-container">
+                <img src="img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo">
+                <a href="#" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio"         class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#horarios"       class="nav__link">Horarios</a></li>
+                    <li class="nav__item"><a href="paquetes.html"   class="nav__link">Paquetes</a></li>  <!-- CAMBIADO: era #pagos -->
+                    <li class="nav__item"><a href="#personalizados" class="nav__link">Personalizados</a></li>
+                    <li class="nav__item"><a href="#citas"          class="nav__link">Citas</a></li>
+                    <li class="nav__item"><a href="#tienda"         class="nav__link">Tienda</a></li>
+                    <li class="nav__item"><a href="pago-en-linea.html" class="nav__link">Pagar en línea</a></li>  <!-- CAMBIADO: era pagos/index.html -->
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <section class="inicio" id="inicio">
+           <div class="carousel-container">
+                <div class="carousel-slide" style="background-image: url('img/fondo2.webp');"></div>
+                <div class="carousel-slide" style="background-image: url('img/1.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('img/2.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('img/3.jpg');"></div>
+            </div>
+
+            <div class="inicio__container Scontainer grid">
+                <div class="inicio__data">
+                    <h1 class="inicio__title">FORJANDO GUERREROS, <br> CREANDO CAMPEONES</h1>
+                    <p class="inicio__description">Disciplina, fuerza y respeto. Únete a la familia Azteca y transforma tu potencial.</p>
+                    <a href="paquetes.html" class="button">Inscríbete Ahora</a>  <!-- CAMBIADO: era #pagos -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="horarios">
+            <h2 class="section__title">Horarios de Clases</h2>
+            <div class="horarios__container">
+                <div class="horarios__grid"> 
+                    
+                    <table class="horarios__table horarios__table--semana">
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:00 am - 09:00 am</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                            </tr>
+                            <tr>
+                                <td>04:00 pm - 05:00 pm</td>
+                                <td class="clase-ninos">NIÑOS</td>
+                                <td class="clase-ninos">NIÑOS</td>
+                                <td class="clase-ninos">NIÑOS</td>
+                                <td class="clase-ninos">-----</td>
+                                <td class="clase-ninos">NIÑOS</td>
+                            </tr>
+                            <tr>
+                                <td>05:00 pm - 06:00 pm</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                            </tr>
+                            <tr>
+                                <td>06:00 pm - 07:00 pm</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                                <td class="clase-general">KICKBOXING</td>
+                            </tr>
+                            <tr>
+                                <td>07:00 pm - 08:00 pm</td>
+                                <td class="clase-general">MMA</td>
+                                <td class="clase-general">MMA</td>
+                                <td class="clase-general">MMA</td>
+                                <td class="clase-general">MMA</td>
+                                <td class="clase-general">MMA</td>
+                            </tr>
+                            <tr>
+                                <td>08:00 pm - 09:00 pm</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                            </tr>
+                            <tr>
+                                <td>09:00pm - 10:00pm</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                                <td class="clase-general">MUAY THAI</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="horarios__sabado-columna">
+                        <div class="horarios__sabado-titulo">SÁBADOS</div>
+                        <div class="horarios__sabado-clase">
+                            <p class="horarios__sabado-hora">09:30 AM A 11:00 AM</p>
+                            <p class="horarios__sabado-nombre">MUAY THAI</p>
+                            <small>(NO INCLUIDA EN LA MENSUALIDADES, SE COBRA POR SEPARADO)</small>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="horarios__leyenda">
+                    <div><span class="color-box clase-general"></span> Clase General</div>
+                    <div><span class="color-box clase-ninos"></span> Clase Niños</div>
+                    <div><span class="color-box clase-seleccionados"></span> Seleccionados</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PAQUETES: ahora solo muestra un CTA a paquetes.html -->
+         <!-- ======== TARJETAS DE PAQUETES ======== -->
+    <section class="section container" id="tipos-paquetes">
+      <h2 class="section__title">TIPOS DE ENTRENAMIENTO</h2>
+      <div class="seccion-separador"></div>
+
+      <div class="paquetes-tipos__container">
+        <article class="paquetes-tipos__card">
+          <img src="img/1.jpg" alt="Entrenamiento de Kickboxing" class="paquetes-tipos__img" loading="lazy" />
+          <div class="paquetes-tipos__content">
+            <h3 class="paquetes-tipos__title">Kickboxing</h3>
+            <p class="paquetes-tipos__description">
+              Combina boxeo y patadas para mejorar técnica, velocidad, coordinación y condición física general.
+            </p>
+            <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
+          </div>
+        </article>
+
+        <article class="paquetes-tipos__card">
+          <img src="img/2.jpg" alt="Entrenamiento de Muay Thai" class="paquetes-tipos__img" loading="lazy" />
+          <div class="paquetes-tipos__content">
+            <h3 class="paquetes-tipos__title">Muay Thai</h3>
+            <p class="paquetes-tipos__description">
+              Disciplina de contacto con enfoque en golpes de puños, codos, rodillas y clinch para defensa real.
+            </p>
+            <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
+          </div>
+        </article>
+
+        <article class="paquetes-tipos__card">
+          <img src="img/3.jpg" alt="Acondicionamiento físico funcional" class="paquetes-tipos__img" loading="lazy" />
+          <div class="paquetes-tipos__content">
+            <h3 class="paquetes-tipos__title">Acondicionamiento Físico</h3>
+            <p class="paquetes-tipos__description">
+              Rutinas funcionales para ganar resistencia, fuerza y movilidad, adaptadas al nivel de cada alumno.
+            </p>
+            <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
+          </div>
+        </article>
+
+        <article class="paquetes-tipos__card">
+          <img src="img/fondo2.webp" alt="Entrenamiento personalizado con coach" class="paquetes-tipos__img" loading="lazy" />
+          <div class="paquetes-tipos__content">
+            <h3 class="paquetes-tipos__title">Entrenamiento Personalizado</h3>
+            <p class="paquetes-tipos__description">
+              Plan individual con objetivos específicos, seguimiento cercano y progresión técnica personalizada.
+            </p>
+            <a href="paquetes.html#personalizados" class="button button-small">Ver paquetes</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+
+        <section class="section container" id="pagos">
+            <h2 class="section__title">PAQUETES</h2>
+            <div style="text-align:center; padding: 2rem 0;">
+                <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-color);">
+                    Tenemos el plan perfecto para ti — Individual, Flexible, Pareja y Personalizados.<br>
+                    Paga fácilmente por WhatsApp, MercadoPago o SPEI.
+                </p>
+                <a href="paquetes.html" class="button" style="font-size:1.1rem; padding:1.2rem 2.5rem;">
+                    <i class="fas fa-dumbbell" style="margin-right:.5rem;"></i> Ver todos los paquetes
+                </a>
+            </div>
+        </section>
+<!--
+        <section class="section container" id="personalizados">  
+            <h2 class="section__title">ENTRENAMIENTOS PERSONALIZADOS</h2>
+
+            <div class="personalizados__container">
+
+                <article class="personalizados__card">
+                    <i class="fas fa-running personalizados__icon"></i>
+                    <h3 class="personalizados__title">Paquete Individual</h3>
+                    <p>Para quienes buscan probar o entrenar de forma ocasional</p>
+                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - Sesión Individual ($350)')">
+                        $350 por sesión
+                    </button>
+                </article>
+
+                <article class="personalizados__card">
+                    <i class="fas fa-person-walking-luggage personalizados__icon"></i>
+                    <h3 class="personalizados__title">Paquete de 4 sesiones</h3>
+                    <p>Entrena 1 vez por semana</p>
+                    <p>Duración de 1 mes</p>
+                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - 4 Sesiones ($1,300)')">
+                        $1,300 en total
+                    </button>
+                </article>
+
+                <article class="personalizados__card">
+                    <i class="fas fa-dumbbell personalizados__icon"></i>
+                    <h3 class="personalizados__title">Paquete de 8 sesiones</h3>
+                    <p>2 veces por semana</p>
+                    <p>Duración de 1 mes</p>
+                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - 8 Sesiones ($2,400)')">
+                        $2,400 en total
+                    </button>
+                </article>
+
+                <article class="personalizados__card">
+                    <i class="fas fa-star personalizados__icon"></i>
+                    <h3 class="personalizados__title">Paquete de 12 sesiones</h3>
+                    <p>3 veces por semana</p>
+                    <p>Duración de 1 mes</p>
+                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - 12 Sesiones ($3,300)')">
+                        $3,300 en total
+                    </button>
+                </article>
+
+            </div>
+
+            <div class="pagos__info-container" style="text-align: center; margin-top: 2rem;">
+                <ul>
+                    <li><div class="titulo-lista-limpio">Incluye en todos los planes:</div></li>
+                    <li>Entrenamiento 100% adaptado a tus metas.</li>
+                    <li>Seguimiento de progreso físico y técnico.</li>
+                    <li>Trabajo de fuerza, potencia y resistencia.</li>
+                    <li>Opción de enfoque en Muay Thai, Kickboxing, Defensa Personal o Acondicionamiento Físico.</li>
+                    <li>Nosotros llevamos el material necesario.</li>
+                </ul>
+            </div>
+        </section>
+ -->
+        <section class="section container" id="citas">
+            <h2 class="section__title">Agenda tu Cita</h2>
+            <div class="citas__container grid">
+                
+                <article class="cita__card">
+                    <h3 class="cita__title">Director de Academia</h3>
+                    <p class="cita__description">Resuelve tus dudas sobre inscripciones, planes personalizados y más.</p>
+                    <div class="cita__contact">
+                        <a href="https://wa.me/5212226762422" target="_blank" class="button-contact"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:rikercruz5@gmail.com" class="button-contact"><i class="far fa-envelope"></i> Correo</a>
+                        <a href="https://www.facebook.com/share/1aKrteZ46r/" target="_blank" class="button-contact"><i class="fab fa-facebook"></i> Facebook</a>
+                    </div>
+                </article>
+
+                <article class="cita__card">
+                    <h3 class="cita__title">Fisioterapeuta</h3>
+                    <p class="cita__description">Recuperación de lesiones, terapia de descarga y prevención para atletas.</p>
+                    <div class="cita__contact">
+                        <a href="https://wa.me/5212211787979" target="_blank" class="button-contact"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:aztecafisioterapia@gmail.com" class="button-contact"><i class="far fa-envelope"></i> Correo</a>
+                    </div>
+                </article>
+
+                <article class="cita__card">
+                    <h3 class="cita__title">Doctor Deportivo</h3>
+                    <p class="cita__description">Chequeos médicos, seguimiento de rendimiento y salud integral.</p>
+                    <div class="cita__contact">
+                        <a href="https://wa.me/5212212259422" target="_blank" class="button-contact"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="mailto:couoh_cohuo@hotmail.com" class="button-contact"><i class="far fa-envelope"></i> Correo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container" id="tienda">
+            <h2 class="section__title">Tienda Oficial</h2>
+            <div class="tienda__container grid">
+                
+                <div class="producto__card">
+                    <img src="img/tienda/vendas.webp" alt="Vendas de Boxeo" class="producto__img">
+                    <h3 class="producto__title">Vendas (Par de 4.5m)</h3>
+                    <span class="producto__price">$160.00 MXN</span>
+                    <button class="button button-small" onclick="abrirModal('Vendas (Par)')">
+                        <i class="fas fa-shopping-cart"></i> Añadir
+                    </button>
+                </div>
+                
+                <div class="producto__card">
+                    <div class="mini-galeria__contenedor js-mini-galeria">
+                        <ul class="mini-galeria__track">
+                            <li class="mini-galeria__slide activo"><img src="img/tienda/adx tribal 2.webp" alt="Vista 1" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="img/tienda/Azul.webp" alt="Vista 2" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="img/tienda/Negro.webp" alt="Vista 3" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="img/tienda/Rojo.webp" alt="Vista 4" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="img/tienda/Rosa.webp" alt="Vista 5" class="producto__img"></li>
+                        </ul>
+                        <button class="mini-galeria__btn mini-galeria__btn--izq oculto"><i class="fas fa-chevron-left"></i></button>
+                        <button class="mini-galeria__btn mini-galeria__btn--der"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <h3 class="producto__title">Guantes de Boxeo</h3>
+                    <span class="producto__price">$900.00 MXN</span>
+                    <button class="button button-small" onclick="abrirModal('Guantes de Boxeo')">
+                        <i class="fas fa-shopping-cart"></i> Añadir
+                    </button>
+                </div>
+                
+                <div class="producto__card">
+                    <div class="mini-galeria__contenedor js-mini-galeria">
+                        <ul class="mini-galeria__track">
+                            <li class="mini-galeria__slide activo">
+                                <video src="img/tienda/playerav.webm" class="producto__img" autoplay muted loop>Su navegador no admite este formato.</video>
+                            </li>
+                            <li class="mini-galeria__slide">
+                                <video src="img/tienda/roja.webm" class="producto__img" autoplay muted loop>Su navegador no admite este formato.</video>
+                            </li>
+                        </ul>
+                        <button class="mini-galeria__btn mini-galeria__btn--izq oculto"><i class="fas fa-chevron-left"></i></button>
+                        <button class="mini-galeria__btn mini-galeria__btn--der"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <h3 class="producto__title">Playera Oficial</h3>
+                    <span class="producto__price">$350.00 MXN</span>
+                    <button class="button button-small" onclick="abrirModal('Playera Oficial')">
+                        <i class="fas fa-shopping-cart"></i> Añadir
+                    </button>
+                </div>
+
+                <div class="producto__card">
+                    <img src="img/tienda/bucal.webp" alt="Bucal" class="producto__img">
+                    <h3 class="producto__title">Protector Bucal</h3>
+                    <span class="producto__price">$100.00 MXN</span>
+                    <button class="button button-small" onclick="abrirModal('Protector Bucal')">
+                        <i class="fas fa-shopping-cart"></i> Añadir
+                    </button>
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div class="footer__data">
+                    <h3 class="footer__title">Contacto</h3>
+                    <p class="footer__description">
+                        <i class="fas fa-map-marker-alt"></i> Unidad Hospitalaria, 72730, Volkswagen 1, 72713 Heroica Puebla de Zaragoza, Pue.<br>
+                        <i class="fas fa-phone"></i> +52 222 676 2422<br>
+                        <i class="fas fa-envelope"></i> rikercruz5@gmail.com <br>
+                    </p>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__title">Redes Sociales</h3>
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/azteca_thai_boxing_?igsh=azBjc3N2dG8yczhi" target="_blank" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1B51MdNFzQ/" target="_blank" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/+522226762422" target="_blank" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__data footer__map">
+                     <h3 class="footer__title">Ubicación</h3>
+                     <iframe src="https://maps.google.com/maps?q=Azteca+Thai+Boxing+Puebla&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <p class="footer__copy">
+                © 2026 AZTECA THAI BOXING. Todos los derechos reservados.
+                <br><span class="footer__dev">Desarrollado por 
+                    <a href="https://www.instagram.com/e1_tiger?igsh=MjYycWR2NG5lejJ4" target="_blank" rel="noopener noreferrer">Antonio Flores</a>
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal Tienda -->
+    <div id="modal-pedido" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">×</span>
+            <h3>Personaliza tu Pedido</h3>
+            <p>Estás comprando: <strong id="producto-nombre-modal"></strong></p>
+            <div id="opcion-talla" class="opcion-personalizacion">
+                <label for="talla">Talla:</label>
+                <select id="talla" name="talla">
+                    <option value="">Selecciona Talla</option>
+                    <option value="S">S - Small</option>
+                    <option value="M">M - Medium</option>
+                    <option value="L">L - Large</option>
+                    <option value="XL">XL - Extra Large</option>
+                </select>
+            </div>
+            <div id="opcion-onzas" class="opcion-personalizacion">
+                <label for="onzas">Onzas:</label>
+                <select id="onzas" name="onzas">
+                    <option value="">Selecciona Onzas</option>
+                    <option value="8oz">8 Onzas</option>
+                    <option value="10oz">10 Onzas</option>
+                    <option value="12oz">12 Onzas</option>
+                    <option value="14oz">14 Onzas</option>
+                    <option value="16oz">16 Onzas</option>
+                </select>
+            </div>
+            <div id="opcion-modelo" class="opcion-personalizacion">
+                <label for="modelo">Modelo:</label>
+                <select id="modelo" name="modelo">
+                    <option value="">Selecciona Modelo</option>
+                    <option value="ADX negro con blanco">ADX negro con blanco</option>
+                    <option value="ADX Azul">ADX Azul</option>
+                    <option value="ADX Negro">ADX Negro</option>
+                    <option value="ADX Rojo">ADX Rojo</option>
+                    <option value="ADX Rosa">ADX Rosa</option>
+                </select>
+            </div>
+            <div id="opcion-color" class="opcion-personalizacion">
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="">Selecciona un color</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo">Rojo</option>
+                </select>
+            </div>
+            <label for="nombre">Tu Nombre (para el pedido):</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+            <button class="button" onclick="enviarWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Comprar y Enviar a WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Paquetes -->
+    <div id="modal-paquete" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModalPaquete()">×</span>
+            <h3>Inscripción / Agendar</h3>
+            <p>Estás eligiendo: <strong id="paquete-nombre-modal" style="color: var(--main-red);"></strong></p>
+            <label for="nombre-paquete-cliente">Tu Nombre Completo:</label>
+            <input type="text" id="nombre-paquete-cliente" required placeholder="Ingresa tu nombre para el registro">
+            <button class="button" onclick="enviarWhatsAppPaquete()">
+                <i class="fab fa-whatsapp"></i> Solicitar Info / Inscribirme
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS SEPARADOS (reemplaza script.js) -->
+    <script src="js/nav.js"></script>
+    <script src="js/tienda.js"></script>
+    <script src="js/paquetes.js"></script>
+
+</body>
+</html>

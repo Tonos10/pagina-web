@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagar en línea | Azteca Thai Boxing</title>
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/pago-en-linea.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ======== HEADER ======== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="logo-container">
+        <img src="img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo" />
+        <a href="index.html" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#inicio"         class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="index.html#horarios"       class="nav__link">Horarios</a></li>
+          <li class="nav__item"><a href="paquetes.html"             class="nav__link">Paquetes</a></li>
+          <li class="nav__item"><a href="index.html#personalizados" class="nav__link">Personalizados</a></li>
+          <li class="nav__item"><a href="index.html#citas"          class="nav__link">Citas</a></li>
+          <li class="nav__item"><a href="index.html#tienda"         class="nav__link">Tienda</a></li>
+          <li class="nav__item"><a href="pago-en-linea.html"        class="nav__link active-link">Pagar en línea</a></li>
+        </ul>
+        <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <!-- ======== CONTENIDO PRINCIPAL ======== -->
+  <main class="pago-main">
+    <div class="pago-inner">
+
+      <header class="pago-header">
+        <a href="paquetes.html" class="pago-back">
+          <i class="fas fa-arrow-left"></i> Ver paquetes
+        </a>
+        <p class="pago-eyebrow">Pagar en línea</p>
+        <h1 class="section__title" style="color:var(--white-color); margin-bottom:.5rem;">Tarjeta virtual</h1>
+        <p class="pago-subtitulo">
+          Consulta los datos de pago y copia el número de tarjeta con un solo clic.
+        </p>
+      </header>
+
+      <!-- Tarjeta interactiva -->
+      <div class="flip-card" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <p class="heading_8264">MASTERCARD</p>
+            <svg class="logo-card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36">
+              <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"/>
+              <path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"/>
+              <path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48C20.376,15.05,18,19.245,18,24z"/>
+            </svg>
+            <svg version="1.1" class="chip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+              <image width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB6VBMVEUAAACNcTiVeUKVeUOYfEaafEeUeUSYfEWZfEaykleyklaXe0SWekSZZjOYfEWYe0WXfUWXe0WcgEicfkiXe0SVekSXekSWekKYe0a9nF67m12ZfUWUeEaXfESVekOdgEmVeUWWekSniU+VeUKVeUOrjFKYfEWliE6WeESZe0GS e0WYfES7ml2Xe0WXeESUeEOWfEWcf0eWfESXe0SXfEWYekSVeUKXfEWxklawkVaZfEWWekOUekOW ekSYfESZe0eXekWYfEWZe0WZe0eVeUSWeETAnmDCoWLJpmbxy4P1zoXwyoLIpWbjvXjivnjgu3bf u3beunWvkFWxkle/nmDivXiWekTnwXvkwHrCoWOuj1SXe0TEo2TDo2PlwHratnKZfEbQrWvPrWua fUfbt3PJp2agg0v0zYX0zYSfgkvKp2frxX7mwHrlv3rsxn/yzIPgvHfduXWXe0XuyIDzzISsjVO1 lVm0lFitjVPzzIPqxX7duna0lVncuHTLqGjvyIHeuXXxyYGZfUayk1iyk1e2lln1zYTEomO2llrb tnOafkjFpGSbfkfZtXLhvHfkv3nqxH3mwXujhU3KqWizlFilh06khk2fgkqsjlPHpWXJp2erjVOh g0yWe0SliE+XekShhEvAn2D///+gx8TWAAAARnRSTlMACVCTtsRl7Pv7+vxkBab7pZv5+ZlL/UnU /f3SJCVe+Fx39naA9/75XSMh0/3SSkia+pil/KRj7Pr662JPkrbP7OLQ0JFOijI1MwAAAAFiS0dE orDd34wAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfnAg0IDx2lsiuJAAACLElEQVRIx2Ng GAXkAUYmZhZWPICFmYkRVQcbOwenmzse4MbFzc6DpIGXj8PD04sA8PbhF+CFaxEU8iWkAQT8hEVg OkTF/InR4eUVICYO1SIhCRMLDAoKDvFDVhUaEhwUFAjjSUlDdMiEhcOEItzdI6OiYxA6YqODIt3d I2DcuDBZsBY5eVTr4xMSYcyk5BRUOXkFsBZFJTQnp6alQxgZmVloUkrKYC0qqmji2WE5EEZuWB6a lKoKdi35YQUQRkFYPpFaCouKIYzi6EDitJSUlsGY5RWVRGjJLyxNy4ZxqtIqqvOxaVELQwZFZdkI JVU1RSiSalAt6rUwUBdWG1CP6pT6gNqwOrgCdQyHNYR5YQFhDXj8MiK1IAeyN6aORiyBjByVTc0F qBoKWpqwRCVSgilOaY2OaUPw29qjOzqLvTAchpos47u6EZyYnngUSRwpuTe6D+6qaFQdOPNLRzOM 1dzhRZyW+CZouHk3dWLXglFcFIflQhj9YWjJGlZcaKAVSvjyPrRQ0oQVKDAQHlYFYUwIm4gqExGm BSkutaVQJeomwViTJqPK6OhCy2Q9sQBk8cY0DxjTJw0lAQWK6cOKfgNhpKK7ZMpUeF3jPa28BCET amiEqJKM+X1gxvWXpoUjVIVPnwErw71nmpgiqiQGBjNzbgs3j1nus+fMndc+Cwm0T52/oNR9lsdC S24ra7Tq1cbWjpXV3sHRCb1idXZ0sGdltXNxRateRwHRAACYHutzk/2I5QAAACV0RVh0ZGF0ZTpj cmVhdGUAMjAyMy0wMi0xM1QwODoxNToyOSswMDowMEUnN7UAAAAldEVYdGRhdGU6bW9kaWZ5ADIw MjMtMDItMTNUMDg6MTU6MjkrMDA6MDA0eo8JAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIzLTAy LTEzVDA4OjE1OjI5KzAwOjAwY2+u1gAAAABJRU5ErkJggg=="/>
+            </svg>
+            <p class="number">9759 2484 5269 6576</p>   <!-- ← ACTUALIZA con tu número real -->
+            <p class="valid_thru">VALID THRU</p>
+            <p class="date_8264">1 2 / 2 8</p>           <!-- ← ACTUALIZA con la fecha real -->
+            <p class="name">AZTECA THAI BOXING</p>        <!-- ← ACTUALIZA con el titular real -->
+          </div>
+          <div class="flip-card-back">
+            <div class="strip"></div>
+            <div class="mstrip"></div>
+            <div class="sstrip"><p class="code">***</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy-group">
+        <button class="button" id="copy-btn" type="button">
+          <i class="fas fa-copy"></i> Copiar número
+        </button>
+        <span class="copy-status" id="copy-status">Número listo para copiar</span>
+      </div>
+
+      <p class="pago-nota">
+        Después de realizar tu transferencia, envía el comprobante por
+        <a href="https://wa.me/5212226762422" target="_blank" style="color:var(--main-red);">WhatsApp</a>
+        para confirmar tu inscripción.
+      </p>
+
+    </div><!-- /pago-inner -->
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__data">
+          <h3 class="footer__title">Contacto</h3>
+          <p class="footer__description">
+            <i class="fas fa-map-marker-alt"></i> Unidad Hospitalaria, 72730, Volkswagen 1, Heroica Puebla de Zaragoza, Pue.<br>
+            <i class="fas fa-phone"></i> +52 222 676 2422<br>
+            <i class="fas fa-envelope"></i> rikercruz5@gmail.com
+          </p>
+        </div>
+        <div class="footer__data">
+          <h3 class="footer__title">Redes Sociales</h3>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/azteca_thai_boxing_?igsh=azBjc3N2dG8yczhi" target="_blank" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1B51MdNFzQ/" target="_blank" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+522226762422" target="_blank" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__data footer__map">
+          <h3 class="footer__title">Ubicación</h3>
+          <iframe src="https://maps.google.com/maps?q=Azteca+Thai+Boxing+Puebla&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © 2026 AZTECA THAI BOXING. Todos los derechos reservados.<br>
+        <span class="footer__dev">Desarrollado por
+          <a href="https://www.instagram.com/e1_tiger?igsh=MjYycWR2NG5lejJ4" target="_blank" rel="noopener noreferrer">Antonio Flores</a>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+    /* Lógica exclusiva de esta página */
+    const copyBtn    = document.getElementById('copy-btn');
+    const copyStatus = document.getElementById('copy-status');
+    const numberText = document.querySelector('.number').textContent.trim();
+
+    function showCopyStatus(text, color) {
+      copyStatus.textContent = text;
+      copyStatus.style.color = color;
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.cssText = 'position:fixed;left:-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(numberText);
+        } else {
+          fallbackCopy(numberText);
+        }
+        showCopyStatus('✓ Número copiado al portapapeles', '#9fdc90');
+      } catch {
+        showCopyStatus('No se pudo copiar. Usa Ctrl+C.', '#f8a19c');
+      }
+    });
+  </script>
+</body>
+</html>

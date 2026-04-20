@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paquetes y Precios | Azteca Thai Boxing</title>
+
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/paquetes.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ======== HEADER (igual que index.html) ======== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="logo-container">
+        <img src="img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo" />
+        <a href="index.html" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#inicio"       class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="index.html#horarios"     class="nav__link">Horarios</a></li>
+          <li class="nav__item"><a href="paquetes.html"           class="nav__link active-link">Paquetes</a></li>
+          <li class="nav__item"><a href="index.html#personalizados" class="nav__link">Personalizados</a></li>
+          <li class="nav__item"><a href="index.html#citas"        class="nav__link">Citas</a></li>
+          <li class="nav__item"><a href="index.html#tienda"       class="nav__link">Tienda</a></li>
+          <li class="nav__item"><a href="pago-en-linea.html"      class="nav__link">Pagar en línea</a></li>
+        </ul>
+        <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- ======== BANNER DE PÁGINA ======== -->
+    <div class="page-banner">
+      <div class="page-banner__content container">
+        <a href="index.html" class="page-banner__back">
+          <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
+        <h1 class="page-banner__title">PAQUETES Y PRECIOS</h1>
+      </div>
+    </div>
+
+   
+    <!-- ======== MENSUALIDADES ======== -->
+    <section class="section container" id="mensualidades">
+      <h2 class="section__title">MENSUALIDADES</h2>
+      <div class="seccion-separador"></div>
+
+      <div class="pagos__container">
+
+        <!-- Paquete Individual -->
+        <article class="pago__card">
+          <i class="fas fa-user pago__icon"></i>
+          <h3 class="pago__title">Individual</h3>
+          <p>1 socio</p>
+          <p>20 SESIONES AL MES</p>
+          <p>Horario a elegir:</p>
+          <p>A. Físico, Muay Thai, Kick Boxing, MMA</p>
+
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Mensualidad Individual — $800 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $800
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_INDIVIDUAL', 'Mensualidad Individual — $800 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $800
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Mensualidad Individual', '800')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+        <!-- Paquete Flexible -->
+        <article class="pago__card">
+          <i class="fas fa-handshake pago__icon"></i>
+          <h3 class="pago__title">Flexible</h3>
+          <p>1 socio</p>
+          <p>6 SESIONES AL MES</p>
+          <p>Horario a elegir:</p>
+          <p>A. Físico, Muay Thai, Kick Boxing, MMA</p>
+
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Mensualidad Flexible — $400 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $400
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_FLEXIBLE', 'Mensualidad Flexible — $400 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $400
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Mensualidad Flexible', '400')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+        <!-- Paquete Pareja -->
+        <article class="pago__card">
+          <i class="fas fa-user-friends pago__icon"></i>
+          <h3 class="pago__title">Pareja / Amigo</h3>
+          <p>2 socios</p>
+          <p>20 SESIONES AL MES C/U</p>
+          <p>Horario a elegir:</p>
+          <p>A. Físico, Muay Thai, Kick Boxing, MMA</p>
+
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Mensualidad Pareja/Amigo — $1,400 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $1,400
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_PAREJA', 'Mensualidad Pareja/Amigo — $1,400 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $1,400
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Mensualidad Pareja/Amigo', '1400')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+      </div><!-- /pagos__container -->
+
+      <div class="pagos__info-container" style="text-align:center; margin-top:2rem;">
+        <h3 class="pagos__info">
+          COSTO DE INSCRIPCIÓN: $300 <br>
+          Aceptamos tarjeta de débito, crédito y SPEI <br>
+          Clase por hora: $80.00
+        </h3>
+      </div>
+    </section>
+
+    <!-- ======== PERSONALIZADOS ======== -->
+    <section class="section container" id="personalizados">
+      <h2 class="section__title">ENTRENAMIENTOS PERSONALIZADOS</h2>
+      <div class="seccion-separador"></div>
+
+      <div class="personalizados__container">
+
+        <article class="personalizados__card">
+          <i class="fas fa-running personalizados__icon"></i>
+          <h3 class="personalizados__title">Sesión Individual</h3>
+          <p>Para quienes buscan probar o entrenar de forma ocasional</p>
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Personalizado — Sesión Individual ($350 MXN)')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $350
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_PERS1', 'Personalizado — Sesión Individual ($350 MXN)')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $350
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Personalizado — Sesión Individual', '350')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+        <article class="personalizados__card">
+          <i class="fas fa-person-walking-luggage personalizados__icon"></i>
+          <h3 class="personalizados__title">4 Sesiones</h3>
+          <p>Entrena 1 vez por semana</p>
+          <p>Duración de 1 mes</p>
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Personalizado — 4 Sesiones ($1,300 MXN)')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $1,300
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_PERS4', 'Personalizado — 4 Sesiones ($1,300 MXN)')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $1,300
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Personalizado — 4 Sesiones', '1300')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+        <article class="personalizados__card">
+          <i class="fas fa-dumbbell personalizados__icon"></i>
+          <h3 class="personalizados__title">8 Sesiones</h3>
+          <p>2 veces por semana</p>
+          <p>Duración de 1 mes</p>
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Personalizado — 8 Sesiones ($2,400 MXN)')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $2,400
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_PERS8', 'Personalizado — 8 Sesiones ($2,400 MXN)')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $2,400
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Personalizado — 8 Sesiones', '2400')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+        <article class="personalizados__card">
+          <i class="fas fa-star personalizados__icon"></i>
+          <h3 class="personalizados__title">12 Sesiones</h3>
+          <p>3 veces por semana</p>
+          <p>Duración de 1 mes</p>
+          <p class="pago__botones-label">Elige cómo pagar</p>
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp"
+              onclick="abrirModalPaquete('Personalizado — 12 Sesiones ($3,300 MXN)')">
+              <i class="fab fa-whatsapp"></i> WhatsApp — $3,300
+            </button>
+            <button class="btn-pago btn-mercadopago"
+              onclick="pagarMP('https://mpago.la/TU_LINK_PERS12', 'Personalizado — 12 Sesiones ($3,300 MXN)')">
+              <i class="fas fa-credit-card"></i> MercadoPago — $3,300
+            </button>
+            <button class="btn-pago btn-spei"
+              onclick="abrirSPEI('Personalizado — 12 Sesiones', '3300')">
+              <i class="fas fa-university"></i> SPEI / Transferencia
+            </button>
+          </div>
+        </article>
+
+      </div><!-- /personalizados__container -->
+
+      <div class="pagos__info-container" style="text-align:center; margin-top:2rem;">
+        <ul>
+          <li><div class="titulo-lista-limpio">Incluye en todos los planes:</div></li>
+          <li>Entrenamiento 100% adaptado a tus metas.</li>
+          <li>Seguimiento de progreso físico y técnico.</li>
+          <li>Trabajo de fuerza, potencia y resistencia.</li>
+          <li>Enfoque en Muay Thai, Kickboxing, Defensa Personal o A. Físico.</li>
+          <li>Nosotros llevamos el material necesario.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ======== FOOTER (igual que index.html) ======== -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <div class="footer__data">
+          <h3 class="footer__title">Contacto</h3>
+          <p class="footer__description">
+            <i class="fas fa-map-marker-alt"></i> Unidad Hospitalaria, 72730, Volkswagen 1, Heroica Puebla de Zaragoza, Pue.<br>
+            <i class="fas fa-phone"></i> +52 222 676 2422<br>
+            <i class="fas fa-envelope"></i> rikercruz5@gmail.com
+          </p>
+        </div>
+        <div class="footer__data">
+          <h3 class="footer__title">Redes Sociales</h3>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/azteca_thai_boxing_?igsh=azBjc3N2dG8yczhi" target="_blank" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1B51MdNFzQ/" target="_blank" class="footer__social-link"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+522226762422" target="_blank" class="footer__social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer__data footer__map">
+          <h3 class="footer__title">Ubicación</h3>
+          <iframe src="https://maps.google.com/maps?q=Azteca+Thai+Boxing+Puebla&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <p class="footer__copy">
+        © 2026 AZTECA THAI BOXING. Todos los derechos reservados.<br>
+        <span class="footer__dev">Desarrollado por
+          <a href="https://www.instagram.com/e1_tiger?igsh=MjYycWR2NG5lejJ4" target="_blank" rel="noopener noreferrer">Antonio Flores</a>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======== MODAL WHATSAPP ======== -->
+  <div id="modal-paquete" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModalPaquete()">×</span>
+      <h3>Inscripción / Agendar</h3>
+      <p>Estás eligiendo: <strong id="paquete-nombre-modal" style="color:var(--main-red);"></strong></p>
+      <label for="nombre-paquete-cliente">Tu Nombre Completo:</label>
+      <input type="text" id="nombre-paquete-cliente" required placeholder="Ingresa tu nombre para el registro" />
+      <button class="button" onclick="enviarWhatsAppPaquete()">
+        <i class="fab fa-whatsapp"></i> Solicitar Info / Inscribirme
+      </button>
+    </div>
+  </div>
+
+  <!-- ======== MODAL SPEI ======== -->
+  <div id="modal-spei" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModalSPEI()">×</span>
+      <h3>Pago por SPEI / Transferencia</h3>
+      <p>Plan: <strong id="spei-plan-nombre" style="color:var(--main-red);"></strong></p>
+      <p style="margin:.25rem 0 1rem; font-size:.9rem; color:#888;">Monto: <strong id="spei-plan-monto" style="color:#fff;"></strong></p>
+
+      <div class="spei-datos">
+        <div class="spei-fila">
+          <span>Banco</span>
+          <span>BBVA / STP</span>    <!-- ← ACTUALIZA con tu banco real -->
+        </div>
+        <div class="spei-fila">
+          <span>Beneficiario</span>
+          <span>AZTECA THAI BOXING</span> <!-- ← ACTUALIZA con el nombre real -->
+        </div>
+        <div class="spei-fila">
+          <span>CLABE</span>
+          <span>
+            012345678901234567        <!-- ← ACTUALIZA con tu CLABE real -->
+            <button class="spei-copy-btn" id="btn-copy-clabe" onclick="copiarCLABE()">
+              <i class="fas fa-copy"></i> Copiar
+            </button>
+          </span>
+        </div>
+        <div class="spei-fila">
+          <span>Concepto</span>
+          <span id="spei-concepto">—</span>
+        </div>
+      </div>
+
+      <p class="spei-nota">
+        Después de tu transferencia, envíanos el comprobante por WhatsApp para confirmar tu lugar.
+      </p>
+
+      <a href="https://wa.me/5212226762422" target="_blank" class="button" style="text-decoration:none; display:flex; justify-content:center; gap:.5rem; margin-top:1rem;">
+        <i class="fab fa-whatsapp"></i> Enviar comprobante
+      </a>
+    </div>
+  </div>
+
+  <!-- ======== SCRIPTS ======== -->
+  <script src="js/nav.js"></script>
+  <script src="js/paquetes.js"></script>
+</body>
+</html>
