@@ -12,7 +12,7 @@
   align-items: flex-end;
   padding-bottom: 2.5rem;
   position: relative;
-  background-image: url('../img/fondo2.webp');
+  background-image: url('../assets/img/fondo2.webp');
   background-size: cover;
   background-position: center 30%;
   margin-top: var(--header-height);
@@ -257,4 +257,55 @@
   background-color: var(--main-red);
   margin: 0 auto 2rem;
   border-radius: 2px;
+}
+
+.efecto-glass {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 25px 20px;
+  color: #ffffff;
+  text-align: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.efecto-glass h4 {
+  margin-bottom: 0.75rem;
+}
+
+.efecto-glass p {
+  margin: 0.25rem 0;
+}
+
+.info-planes {
+  padding-top: 0;
+}
+
+.info-planes .pagos__info-container {
+  display: flex;
+  justify-content: center;
+}
+
+.efecto-glass--info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.efecto-glass__title {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.efecto-glass__list {
+  list-style: none;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.efecto-glass__list li::before {
+  content: "\2022 ";
 }

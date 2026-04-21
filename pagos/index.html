@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pago en línea | Azteca Thai Boxing</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/pagos.css" />
   </head>
   <body>
     <main class="page">
@@ -105,39 +105,6 @@
       </div>
     </main>
 
-    <script>
-      const copyBtn = document.getElementById('copy-btn');
-      const copyStatus = document.getElementById('copy-status');
-      const numberText = document.querySelector('.number').textContent.trim();
-
-      function showCopyStatus(text, color) {
-        copyStatus.textContent = text;
-        copyStatus.style.color = color;
-      }
-
-      function fallbackCopyText(text) {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        textarea.style.position = 'fixed';
-        textarea.style.left = '-9999px';
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-      }
-
-      copyBtn.addEventListener('click', async () => {
-        try {
-          if (navigator.clipboard && window.isSecureContext) {
-            await navigator.clipboard.writeText(numberText);
-          } else {
-            fallbackCopyText(numberText);
-          }
-          showCopyStatus('Número copiado al portapapeles', '#9fdc90');
-        } catch (error) {
-          showCopyStatus('No se pudo copiar. Usa Ctrl+C.', '#f8a19c');
-        }
-      });
-    </script>
+    <script src="../js/pagos.js"></script>
   </body>
 </html>

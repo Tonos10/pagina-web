@@ -61,3 +61,39 @@
     });
   }
 })();
+
+/* =========================================
+   PARALLAX DEL LOGO EN SECCIÓN HERO
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const seccionHero = document.querySelector('.hero');
+    const elementoGuerrero = document.querySelector('.warrior-wrap');
+    const elementoResplandor = document.querySelector('.glow-wrap');
+    
+    // Solo ejecuta si estamos en la página que tiene esta sección
+    if (seccionHero && elementoGuerrero && elementoResplandor) {
+        
+        const esDispositivoMovil = () => window.innerWidth < 768;
+        
+        window.addEventListener('scroll', () => {
+            const rectangulo = seccionHero.getBoundingClientRect();
+            const alturaHero = seccionHero.offsetHeight;
+            
+            /* % de cuánto se ha scrolleado dentro del hero */
+            const progreso = -rectangulo.top / alturaHero;
+            const limite = Math.max(0, Math.min(1, progreso));
+            
+            if (esDispositivoMovil()) {
+                /* Móvil: se mueve hacia arriba para despejar el texto */
+                const offsetY = limite * -100;
+                elementoGuerrero.style.transform = `translateX(-50%) translateY(calc(-50% + ${offsetY}px))`;
+                elementoResplandor.style.transform = `translateX(-50%) translateY(calc(-50% + ${offsetY * 0.5}px))`;
+            } else {
+                /* Desktop: se mueve hacia la derecha escondiéndose gradualmente */
+                const offsetX = limite * 150; 
+                elementoGuerrero.style.transform = `translateY(-50%) translateX(${offsetX}px)`;
+                elementoResplandor.style.transform = `translateY(-50%) translateX(${offsetX * 0.6}px)`;
+            }
+        }, { passive: true });
+    }
+});

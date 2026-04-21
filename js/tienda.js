@@ -79,6 +79,12 @@
       if (!onzas || !modelo) { alert('Por favor, selecciona Onzas y Modelo.'); return; }
       detalles.push(`Modelo: ${modelo}`, `Onzas: ${onzas}`);
 
+    } else if (esPlayera(productoActual)) {
+      const talla = document.getElementById('talla').value;
+      const color = document.getElementById('color').value;
+      if (!talla || !color) { alert('Selecciona Talla y Color.'); return; }
+      detalles.push(`Talla: ${talla}`, `Color: ${color}`);
+
     } else if (necesitaTalla(productoActual)) {
       const talla = document.getElementById('talla').value;
       if (!talla) { alert('Selecciona una Talla.'); return; }

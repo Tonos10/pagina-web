@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paquetes y Precios | Azteca Thai Boxing</title>
 
-  <link rel="stylesheet" href="styles/style.css" />
-  <link rel="stylesheet" href="styles/paquetes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/paquetes.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
   <header class="header" id="header">
     <nav class="nav container">
       <div class="logo-container">
-        <img src="img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo" />
+        <img src="assets/img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo" />
         <a href="index.html" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
       </div>
 
@@ -29,7 +29,6 @@
           <li class="nav__item"><a href="index.html#inicio"       class="nav__link">Inicio</a></li>
           <li class="nav__item"><a href="index.html#horarios"     class="nav__link">Horarios</a></li>
           <li class="nav__item"><a href="paquetes.html"           class="nav__link active-link">Paquetes</a></li>
-          <li class="nav__item"><a href="index.html#personalizados" class="nav__link">Personalizados</a></li>
           <li class="nav__item"><a href="index.html#citas"        class="nav__link">Citas</a></li>
           <li class="nav__item"><a href="index.html#tienda"       class="nav__link">Tienda</a></li>
           <li class="nav__item"><a href="pago-en-linea.html"      class="nav__link">Pagar en línea</a></li>
@@ -139,14 +138,13 @@
           </div>
         </article>
 
-      </div><!-- /pagos__container -->
+      </div><!-- /pagos -->
+            </div><!-- /pagos -->
 
-      <div class="pagos__info-container" style="text-align:center; margin-top:2rem;">
-        <h3 class="pagos__info">
-          COSTO DE INSCRIPCIÓN: $300 <br>
-          Aceptamos tarjeta de débito, crédito y SPEI <br>
-          Clase por hora: $80.00
-        </h3>
+      <div class="efecto-glass">
+        <h4>COSTO DE INSCRIPCION: $300</h4>
+        <p>ACEPTAMOS TARJETA DE DEBITO, CREDITO Y SPEI</p>
+        <p>CLASE POR HORA: $80.00</p>
       </div>
     </section>
 
@@ -245,16 +243,21 @@
         </article>
 
       </div><!-- /personalizados__container -->
+    </section>
 
-      <div class="pagos__info-container" style="text-align:center; margin-top:2rem;">
-        <ul>
-          <li><div class="titulo-lista-limpio">Incluye en todos los planes:</div></li>
-          <li>Entrenamiento 100% adaptado a tus metas.</li>
-          <li>Seguimiento de progreso físico y técnico.</li>
-          <li>Trabajo de fuerza, potencia y resistencia.</li>
-          <li>Enfoque en Muay Thai, Kickboxing, Defensa Personal o A. Físico.</li>
-          <li>Nosotros llevamos el material necesario.</li>
-        </ul>
+    <!-- ======== INFORMACION ADICIONAL ======== -->
+    <section class="section container info-planes" id="info-planes">
+      <div class="pagos__info-container">
+        <div class="efecto-glass efecto-glass--info">
+          <h3 class="efecto-glass__title">Incluye en todos los planes:</h3>
+          <ul class="efecto-glass__list">
+            <li>Entrenamiento 100% adaptado a tus metas.</li>
+            <li>Seguimiento de progreso fisico y tecnico.</li>
+            <li>Trabajo de fuerza, potencia y resistencia.</li>
+            <li>Enfoque en Muay Thai, Kickboxing, Defensa Personal o A. Fisico.</li>
+            <li>Nosotros llevamos el material necesario.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -319,16 +322,16 @@
       <div class="spei-datos">
         <div class="spei-fila">
           <span>Banco</span>
-          <span>BBVA / STP</span>    <!-- ← ACTUALIZA con tu banco real -->
+          <span>Banorte</span>    <!-- ← ACTUALIZA con tu banco real -->
         </div>
         <div class="spei-fila">
           <span>Beneficiario</span>
-          <span>AZTECA THAI BOXING</span> <!-- ← ACTUALIZA con el nombre real -->
+          <span>Enrique Cruz Osorio</span> <!-- ← ACTUALIZA con el nombre real -->
         </div>
         <div class="spei-fila">
           <span>CLABE</span>
           <span>
-            012345678901234567        <!-- ← ACTUALIZA con tu CLABE real -->
+            072650011700034374       <!-- ← ACTUALIZA con tu CLABE real -->
             <button class="spei-copy-btn" id="btn-copy-clabe" onclick="copiarCLABE()">
               <i class="fas fa-copy"></i> Copiar
             </button>

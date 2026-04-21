@@ -31,7 +31,7 @@ html::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../img/logofondo.webp');
+  background-image: url('../assets/img/logofondo.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 500px;

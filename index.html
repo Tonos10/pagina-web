@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZTECA THAI BOXING - Forjando Guerreros</title>
     
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <div class="logo-container">
-                <img src="img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo">
+                <img src="assets/img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo">
                 <a href="#" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
             </div>
 
@@ -27,11 +27,10 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#inicio"         class="nav__link active-link">Inicio</a></li>
                     <li class="nav__item"><a href="#horarios"       class="nav__link">Horarios</a></li>
-                    <li class="nav__item"><a href="paquetes.html"   class="nav__link">Paquetes</a></li>  <!-- CAMBIADO: era #pagos -->
-                    <li class="nav__item"><a href="#personalizados" class="nav__link">Personalizados</a></li>
+                    <li class="nav__item"><a href="paquetes.html"   class="nav__link">Paquetes</a></li>
                     <li class="nav__item"><a href="#citas"          class="nav__link">Citas</a></li>
                     <li class="nav__item"><a href="#tienda"         class="nav__link">Tienda</a></li>
-                    <li class="nav__item"><a href="pago-en-linea.html" class="nav__link">Pagar en línea</a></li>  <!-- CAMBIADO: era pagos/index.html -->
+                    <li class="nav__item"><a href="pago-en-linea.html" class="nav__link">Pagar en línea</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
             </div>
@@ -44,17 +43,17 @@
         
         <section class="inicio" id="inicio">
            <div class="carousel-container">
-                <div class="carousel-slide" style="background-image: url('img/fondo2.webp');"></div>
-                <div class="carousel-slide" style="background-image: url('img/1.jpg');"></div>
-                <div class="carousel-slide" style="background-image: url('img/2.jpg');"></div>
-                <div class="carousel-slide" style="background-image: url('img/3.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/fondo2.webp');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/1.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/2.jpg');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/3.jpg');"></div>
             </div>
 
             <div class="inicio__container Scontainer grid">
                 <div class="inicio__data">
                     <h1 class="inicio__title">FORJANDO GUERREROS, <br> CREANDO CAMPEONES</h1>
                     <p class="inicio__description">Disciplina, fuerza y respeto. Únete a la familia Azteca y transforma tu potencial.</p>
-                    <a href="paquetes.html" class="button">Inscríbete Ahora</a>  <!-- CAMBIADO: era #pagos -->
+                    <a href="paquetes.html" class="button">Inscríbete Ahora</a>
                 </div>
             </div>
         </section>
@@ -154,132 +153,88 @@
             </div>
         </section>
 
-        <!-- SECCIÓN PAQUETES: ahora solo muestra un CTA a paquetes.html -->
-         <!-- ======== TARJETAS DE PAQUETES ======== -->
-    <section class="section container" id="tipos-paquetes">
-      <h2 class="section__title">TIPOS DE ENTRENAMIENTO</h2>
-      <div class="seccion-separador"></div>
+        <section class="section container" id="tipos-paquetes">
+          <h2 class="section__title">TIPOS DE ENTRENAMIENTO</h2>
+          <div class="seccion-separador"></div>
 
-      <div class="paquetes-tipos__container">
-        <article class="paquetes-tipos__card">
-          <img src="img/1.jpg" alt="Entrenamiento de Kickboxing" class="paquetes-tipos__img" loading="lazy" />
-          <div class="paquetes-tipos__content">
-            <h3 class="paquetes-tipos__title">Kickboxing</h3>
-            <p class="paquetes-tipos__description">
-              Combina boxeo y patadas para mejorar técnica, velocidad, coordinación y condición física general.
-            </p>
-            <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
-          </div>
-        </article>
-
-        <article class="paquetes-tipos__card">
-          <img src="img/2.jpg" alt="Entrenamiento de Muay Thai" class="paquetes-tipos__img" loading="lazy" />
-          <div class="paquetes-tipos__content">
-            <h3 class="paquetes-tipos__title">Muay Thai</h3>
-            <p class="paquetes-tipos__description">
-              Disciplina de contacto con enfoque en golpes de puños, codos, rodillas y clinch para defensa real.
-            </p>
-            <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
-          </div>
-        </article>
-
-        <article class="paquetes-tipos__card">
-          <img src="img/3.jpg" alt="Acondicionamiento físico funcional" class="paquetes-tipos__img" loading="lazy" />
-          <div class="paquetes-tipos__content">
-            <h3 class="paquetes-tipos__title">Acondicionamiento Físico</h3>
-            <p class="paquetes-tipos__description">
-              Rutinas funcionales para ganar resistencia, fuerza y movilidad, adaptadas al nivel de cada alumno.
-            </p>
-            <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
-          </div>
-        </article>
-
-        <article class="paquetes-tipos__card">
-          <img src="img/fondo2.webp" alt="Entrenamiento personalizado con coach" class="paquetes-tipos__img" loading="lazy" />
-          <div class="paquetes-tipos__content">
-            <h3 class="paquetes-tipos__title">Entrenamiento Personalizado</h3>
-            <p class="paquetes-tipos__description">
-              Plan individual con objetivos específicos, seguimiento cercano y progresión técnica personalizada.
-            </p>
-            <a href="paquetes.html#personalizados" class="button button-small">Ver paquetes</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-
-
-        <section class="section container" id="pagos">
-            <h2 class="section__title">PAQUETES</h2>
-            <div style="text-align:center; padding: 2rem 0;">
-                <p style="font-size:1.1rem; margin-bottom:2rem; color:var(--text-color);">
-                    Tenemos el plan perfecto para ti — Individual, Flexible, Pareja y Personalizados.<br>
-                    Paga fácilmente por WhatsApp, MercadoPago o SPEI.
+          <div class="paquetes-tipos__container">
+            <article class="paquetes-tipos__card">
+              <img src="assets/img/1.jpg" alt="Entrenamiento de Kickboxing" class="paquetes-tipos__img" loading="lazy" />
+              <div class="paquetes-tipos__content">
+                <h3 class="paquetes-tipos__title">Kickboxing</h3>
+                <p class="paquetes-tipos__description">
+                  Combina boxeo y patadas para mejorar técnica, velocidad, coordinación y condición física general.
                 </p>
-                <a href="paquetes.html" class="button" style="font-size:1.1rem; padding:1.2rem 2.5rem;">
-                    <i class="fas fa-dumbbell" style="margin-right:.5rem;"></i> Ver todos los paquetes
-                </a>
+                <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
+              </div>
+            </article>
+
+            <article class="paquetes-tipos__card">
+              <img src="assets/img/2.jpg" alt="Entrenamiento de Muay Thai" class="paquetes-tipos__img" loading="lazy" />
+              <div class="paquetes-tipos__content">
+                <h3 class="paquetes-tipos__title">Muay Thai</h3>
+                <p class="paquetes-tipos__description">
+                  Disciplina de contacto con enfoque en golpes de puños, codos, rodillas y clinch para defensa real.
+                </p>
+                <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
+              </div>
+            </article>
+
+            <article class="paquetes-tipos__card">
+              <img src="assets/img/3.jpg" alt="Acondicionamiento físico funcional" class="paquetes-tipos__img" loading="lazy" />
+              <div class="paquetes-tipos__content">
+                <h3 class="paquetes-tipos__title">Acondicionamiento Físico</h3>
+                <p class="paquetes-tipos__description">
+                  Rutinas funcionales para ganar resistencia, fuerza y movilidad, adaptadas al nivel de cada alumno.
+                </p>
+                <a href="paquetes.html#mensualidades" class="button button-small">Ver paquetes</a>
+              </div>
+            </article>
+
+            <article class="paquetes-tipos__card">
+              <img src="assets/img/fondo2.webp" alt="Entrenamiento personalizado con coach" class="paquetes-tipos__img" loading="lazy" />
+              <div class="paquetes-tipos__content">
+                <h3 class="paquetes-tipos__title">Entrenamiento Personalizado</h3>
+                <p class="paquetes-tipos__description">
+                  Plan individual con objetivos específicos, seguimiento cercano y progresión técnica personalizada.
+                </p>
+                <a href="paquetes.html#personalizados" class="button button-small">Ver paquetes</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="seccion-paquetes hero" id="pagos-hero">
+            <div class="glow-wrap">
+                <div class="glow-bg"></div>
+            </div>
+            <div class="warrior-wrap">
+                <img src="assets/img/logofondo.webp" alt="Guerrero Azteca">
+            </div>
+            
+            <div class="contenido-paquetes">
+                <div class="etiqueta-membresias"><span class="linea"></span> MEMBRESÍAS <span class="linea"></span></div>
+                <h1 class="titulo-principal">PAQUE<span class="texto-rojo">TES</span></h1>
+                <h2 class="subtitulo">PLANES PREMIUM Y FLEXIBLES</h2>
+                
+                <p class="descripcion">
+                    Individual, Flexible, Pareja y Personalizados.<br>
+                    Paga por WhatsApp, MercadoPago o SPEI.
+                </p>
+
+                <div class="contenedor-boton">
+                    <a href="paquetes.html" class="button-outline">
+                        + Ver todos los paquetes
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-down">
+                <span class="scroll-texto">SCROLL</span>
+                <div class="circle-arrow"><i class="fas fa-arrow-down"></i></div>
             </div>
         </section>
-<!--
-        <section class="section container" id="personalizados">  
-            <h2 class="section__title">ENTRENAMIENTOS PERSONALIZADOS</h2>
 
-            <div class="personalizados__container">
-
-                <article class="personalizados__card">
-                    <i class="fas fa-running personalizados__icon"></i>
-                    <h3 class="personalizados__title">Paquete Individual</h3>
-                    <p>Para quienes buscan probar o entrenar de forma ocasional</p>
-                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - Sesión Individual ($350)')">
-                        $350 por sesión
-                    </button>
-                </article>
-
-                <article class="personalizados__card">
-                    <i class="fas fa-person-walking-luggage personalizados__icon"></i>
-                    <h3 class="personalizados__title">Paquete de 4 sesiones</h3>
-                    <p>Entrena 1 vez por semana</p>
-                    <p>Duración de 1 mes</p>
-                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - 4 Sesiones ($1,300)')">
-                        $1,300 en total
-                    </button>
-                </article>
-
-                <article class="personalizados__card">
-                    <i class="fas fa-dumbbell personalizados__icon"></i>
-                    <h3 class="personalizados__title">Paquete de 8 sesiones</h3>
-                    <p>2 veces por semana</p>
-                    <p>Duración de 1 mes</p>
-                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - 8 Sesiones ($2,400)')">
-                        $2,400 en total
-                    </button>
-                </article>
-
-                <article class="personalizados__card">
-                    <i class="fas fa-star personalizados__icon"></i>
-                    <h3 class="personalizados__title">Paquete de 12 sesiones</h3>
-                    <p>3 veces por semana</p>
-                    <p>Duración de 1 mes</p>
-                    <button class="button button-dark" onclick="abrirModalPaquete('Personalizado - 12 Sesiones ($3,300)')">
-                        $3,300 en total
-                    </button>
-                </article>
-
-            </div>
-
-            <div class="pagos__info-container" style="text-align: center; margin-top: 2rem;">
-                <ul>
-                    <li><div class="titulo-lista-limpio">Incluye en todos los planes:</div></li>
-                    <li>Entrenamiento 100% adaptado a tus metas.</li>
-                    <li>Seguimiento de progreso físico y técnico.</li>
-                    <li>Trabajo de fuerza, potencia y resistencia.</li>
-                    <li>Opción de enfoque en Muay Thai, Kickboxing, Defensa Personal o Acondicionamiento Físico.</li>
-                    <li>Nosotros llevamos el material necesario.</li>
-                </ul>
-            </div>
-        </section>
- -->
         <section class="section container" id="citas">
             <h2 class="section__title">Agenda tu Cita</h2>
             <div class="citas__container grid">
@@ -319,7 +274,7 @@
             <div class="tienda__container grid">
                 
                 <div class="producto__card">
-                    <img src="img/tienda/vendas.webp" alt="Vendas de Boxeo" class="producto__img">
+                    <img src="assets/img/tienda/vendas.webp" alt="Vendas de Boxeo" class="producto__img">
                     <h3 class="producto__title">Vendas (Par de 4.5m)</h3>
                     <span class="producto__price">$160.00 MXN</span>
                     <button class="button button-small" onclick="abrirModal('Vendas (Par)')">
@@ -330,11 +285,11 @@
                 <div class="producto__card">
                     <div class="mini-galeria__contenedor js-mini-galeria">
                         <ul class="mini-galeria__track">
-                            <li class="mini-galeria__slide activo"><img src="img/tienda/adx tribal 2.webp" alt="Vista 1" class="producto__img"></li>
-                            <li class="mini-galeria__slide"><img src="img/tienda/Azul.webp" alt="Vista 2" class="producto__img"></li>
-                            <li class="mini-galeria__slide"><img src="img/tienda/Negro.webp" alt="Vista 3" class="producto__img"></li>
-                            <li class="mini-galeria__slide"><img src="img/tienda/Rojo.webp" alt="Vista 4" class="producto__img"></li>
-                            <li class="mini-galeria__slide"><img src="img/tienda/Rosa.webp" alt="Vista 5" class="producto__img"></li>
+                            <li class="mini-galeria__slide activo"><img src="assets/img/tienda/adx tribal 2.webp" alt="Vista 1" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="assets/img/tienda/Azul.webp" alt="Vista 2" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="assets/img/tienda/Negro.webp" alt="Vista 3" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="assets/img/tienda/Rojo.webp" alt="Vista 4" class="producto__img"></li>
+                            <li class="mini-galeria__slide"><img src="assets/img/tienda/Rosa.webp" alt="Vista 5" class="producto__img"></li>
                         </ul>
                         <button class="mini-galeria__btn mini-galeria__btn--izq oculto"><i class="fas fa-chevron-left"></i></button>
                         <button class="mini-galeria__btn mini-galeria__btn--der"><i class="fas fa-chevron-right"></i></button>
@@ -350,10 +305,10 @@
                     <div class="mini-galeria__contenedor js-mini-galeria">
                         <ul class="mini-galeria__track">
                             <li class="mini-galeria__slide activo">
-                                <video src="img/tienda/playerav.webm" class="producto__img" autoplay muted loop>Su navegador no admite este formato.</video>
+                                <video src="assets/video/playerav.webm" class="producto__img" autoplay muted loop>Su navegador no admite este formato.</video>
                             </li>
                             <li class="mini-galeria__slide">
-                                <video src="img/tienda/roja.webm" class="producto__img" autoplay muted loop>Su navegador no admite este formato.</video>
+                                <video src="assets/video/roja.webm" class="producto__img" autoplay muted loop>Su navegador no admite este formato.</video>
                             </li>
                         </ul>
                         <button class="mini-galeria__btn mini-galeria__btn--izq oculto"><i class="fas fa-chevron-left"></i></button>
@@ -367,7 +322,7 @@
                 </div>
 
                 <div class="producto__card">
-                    <img src="img/tienda/bucal.webp" alt="Bucal" class="producto__img">
+                    <img src="assets/img/tienda/bucal.webp" alt="Bucal" class="producto__img">
                     <h3 class="producto__title">Protector Bucal</h3>
                     <span class="producto__price">$100.00 MXN</span>
                     <button class="button button-small" onclick="abrirModal('Protector Bucal')">
@@ -415,7 +370,6 @@
         </div>
     </footer>
 
-    <!-- Modal Tienda -->
     <div id="modal-pedido" class="modal">
         <div class="modal-contenido">
             <span class="cerrar" onclick="cerrarModal()">×</span>
@@ -469,7 +423,6 @@
         </div>
     </div>
 
-    <!-- Modal Paquetes -->
     <div id="modal-paquete" class="modal">
         <div class="modal-contenido">
             <span class="cerrar" onclick="cerrarModalPaquete()">×</span>
@@ -483,7 +436,6 @@
         </div>
     </div>
 
-    <!-- SCRIPTS SEPARADOS (reemplaza script.js) -->
     <script src="js/nav.js"></script>
     <script src="js/tienda.js"></script>
     <script src="js/paquetes.js"></script>
