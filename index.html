@@ -43,10 +43,13 @@
         
         <section class="inicio" id="inicio">
            <div class="carousel-container">
-                <div class="carousel-slide" style="background-image: url('assets/img/fondo2.webp');"></div>
-                <div class="carousel-slide" style="background-image: url('assets/img/1.jpg');"></div>
-                <div class="carousel-slide" style="background-image: url('assets/img/2.jpg');"></div>
-                <div class="carousel-slide" style="background-image: url('assets/img/3.jpg');"></div>
+                
+                <div class="carousel-slide" style="background-image: url('assets/img/img\ fondo/fondo2.webp');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/img\ fondo/3.webp');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/img\ fondo/5.webp')"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/img\ fondo/4.webp');"></div>
+                <div class="carousel-slide" style="background-image: url('assets/img/img\ fondo/1.jpg');"></div>
+                
             </div>
 
             <div class="inicio__container Scontainer grid">
@@ -59,7 +62,16 @@
         </section>
 
         <section class="section container" id="horarios">
-            <h2 class="section__title">Horarios de Clases</h2>
+            <div class="section-title-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="notititle">HORARIO DE CLASE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-separador"></div>
+
             <div class="horarios__container">
                 <div class="horarios__grid"> 
                     
@@ -148,18 +160,24 @@
                 <div class="horarios__leyenda">
                     <div><span class="color-box clase-general"></span> Clase General</div>
                     <div><span class="color-box clase-ninos"></span> Clase Niños</div>
-                    <div><span class="color-box clase-seleccionados"></span> Seleccionados</div>
                 </div>
             </div>
         </section>
 
         <section class="section container" id="tipos-paquetes">
-          <h2 class="section__title">TIPOS DE ENTRENAMIENTO</h2>
-          <div class="seccion-separador"></div>
+            <div class="section-title-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="notititle">TIPOS DE ENTRENAMIENTO</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seccion-separador"></div>
 
           <div class="paquetes-tipos__container">
             <article class="paquetes-tipos__card">
-              <img src="assets/img/1.jpg" alt="Entrenamiento de Kickboxing" class="paquetes-tipos__img" loading="lazy" />
+              <img src="assets/img/modols/kickboxing.webp" alt="Entrenamiento de Kickboxing" class="paquetes-tipos__img" loading="lazy" />
               <div class="paquetes-tipos__content">
                 <h3 class="paquetes-tipos__title">Kickboxing</h3>
                 <p class="paquetes-tipos__description">
@@ -170,7 +188,7 @@
             </article>
 
             <article class="paquetes-tipos__card">
-              <img src="assets/img/2.jpg" alt="Entrenamiento de Muay Thai" class="paquetes-tipos__img" loading="lazy" />
+              <img src="assets/img/modols/muay thai.webp" alt="Entrenamiento de Muay Thai" class="paquetes-tipos__img" loading="lazy" />
               <div class="paquetes-tipos__content">
                 <h3 class="paquetes-tipos__title">Muay Thai</h3>
                 <p class="paquetes-tipos__description">
@@ -181,7 +199,7 @@
             </article>
 
             <article class="paquetes-tipos__card">
-              <img src="assets/img/3.jpg" alt="Acondicionamiento físico funcional" class="paquetes-tipos__img" loading="lazy" />
+              <img src="assets/img/modols/a. fisico.webp" alt="Acondicionamiento físico funcional" class="paquetes-tipos__img" loading="lazy" />
               <div class="paquetes-tipos__content">
                 <h3 class="paquetes-tipos__title">Acondicionamiento Físico</h3>
                 <p class="paquetes-tipos__description">
@@ -192,7 +210,7 @@
             </article>
 
             <article class="paquetes-tipos__card">
-              <img src="assets/img/fondo2.webp" alt="Entrenamiento personalizado con coach" class="paquetes-tipos__img" loading="lazy" />
+              <img src="assets/img/modols/perzonalizado.webp" alt="Entrenamiento personalizado con coach" class="paquetes-tipos__img" loading="lazy" />
               <div class="paquetes-tipos__content">
                 <h3 class="paquetes-tipos__title">Entrenamiento Personalizado</h3>
                 <p class="paquetes-tipos__description">
@@ -236,11 +254,19 @@
         </section>
 
         <section class="section container" id="citas">
-            <h2 class="section__title">Agenda tu Cita</h2>
+            <div class="section-title-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="notititle">AGENDA TU CITA</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="citas__container grid">
                 
                 <article class="cita__card">
                     <h3 class="cita__title">Director de Academia</h3>
+                    <i class="fa-solid fa-user-tie"></i>
                     <p class="cita__description">Resuelve tus dudas sobre inscripciones, planes personalizados y más.</p>
                     <div class="cita__contact">
                         <a href="https://wa.me/5212226762422" target="_blank" class="button-contact"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -250,7 +276,9 @@
                 </article>
 
                 <article class="cita__card">
-                    <h3 class="cita__title">Fisioterapeuta</h3>
+                        <h3 class="cita__title">Fisioterapeuta</h3>
+                        <!-- Icono personalizado: reemplazar Font Awesome por imagen local -->
+                        <img src="assets/img/iconos/fisio.webp" alt="Fisioterapeuta" class="cita__icon">
                     <p class="cita__description">Recuperación de lesiones, terapia de descarga y prevención para atletas.</p>
                     <div class="cita__contact">
                         <a href="https://wa.me/5212211787979" target="_blank" class="button-contact"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -260,6 +288,7 @@
 
                 <article class="cita__card">
                     <h3 class="cita__title">Doctor Deportivo</h3>
+                    <i class="fa-solid fa-user-doctor"></i>
                     <p class="cita__description">Chequeos médicos, seguimiento de rendimiento y salud integral.</p>
                     <div class="cita__contact">
                         <a href="https://wa.me/5212212259422" target="_blank" class="button-contact"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -270,7 +299,14 @@
         </section>
 
         <section class="section container" id="tienda">
-            <h2 class="section__title">Tienda Oficial</h2>
+            <div class="section-title-container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="notititle">TIENDA OFICIAL</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="tienda__container grid">
                 
                 <div class="producto__card">

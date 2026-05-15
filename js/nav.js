@@ -29,12 +29,23 @@
      ----------------------------------------- */
   const header = document.getElementById('header');
 
-  function onScroll() {
+  function scrollHeader() {
     if (!header) return;
-    header.classList.toggle('scroll-header', window.scrollY >= 50);
+    // Detectamos el scroll en distintos navegadores
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollY >= 50) {
+      header.classList.add('scroll-header');
+    } else {
+      header.classList.remove('scroll-header');
+    }
+    
     highlightActiveSection();
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+
+  window.addEventListener('scroll', scrollHeader, { passive: true });
+  // Ejecutar una vez al cargar por si ya hay scroll
+  window.addEventListener('load', scrollHeader);
 
   /* -----------------------------------------
      3. LINK ACTIVO SEGÚN SECCIÓN VISIBLE

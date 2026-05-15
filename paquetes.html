@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paquetes y Precios | Azteca Thai Boxing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paquetes y Precios — Azteca Thai Boxing</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/logo.webp" type="image/x-icon">
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/paquetes.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/paquetes.css">
 </head>
-
 <body>
 
-  <!-- ======== HEADER (igual que index.html) ======== -->
+  <!-- ======== HEADER ======== -->
   <header class="header" id="header">
     <nav class="nav container">
-      <div class="logo-container">
-        <img src="assets/img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo" />
-        <a href="index.html" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
-      </div>
+        <div class="logo-container">
+            <img src="assets/img/logofondo.webp" alt="Logo Azteca Thai Boxing" class="logo">
+            <a href="index.html" class="nav__logo">AZTECA <span>THAI BOXING</span></a>
+        </div>
 
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="index.html#inicio"       class="nav__link">Inicio</a></li>
-          <li class="nav__item"><a href="index.html#horarios"     class="nav__link">Horarios</a></li>
-          <li class="nav__item"><a href="paquetes.html"           class="nav__link active-link">Paquetes</a></li>
-          <li class="nav__item"><a href="index.html#citas"        class="nav__link">Citas</a></li>
-          <li class="nav__item"><a href="index.html#tienda"       class="nav__link">Tienda</a></li>
-          <li class="nav__item"><a href="pago-en-linea.html"      class="nav__link">Pagar en línea</a></li>
-        </ul>
-        <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
-      </div>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#inicio"   class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="index.html#horarios" class="nav__link">Horarios</a></li>
+                <li class="nav__item"><a href="paquetes.html"       class="nav__link active-link">Paquetes</a></li>
+                <li class="nav__item"><a href="index.html#citas"    class="nav__link">Citas</a></li>
+                <li class="nav__item"><a href="index.html#tienda"   class="nav__link">Tienda</a></li>
+                <li class="nav__item"><a href="pago-en-linea.html"  class="nav__link">Pagar en línea</a></li>
+            </ul>
+            <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
+        </div>
 
-      <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+        <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
     </nav>
   </header>
 
@@ -55,189 +61,291 @@
    
     <!-- ======== MENSUALIDADES ======== -->
     <section class="section container" id="mensualidades">
-      <h2 class="section__title">MENSUALIDADES</h2>
+      <div class="card">
+        <div class="bg"></div>
+        <div class="blob"></div>
+        <div class="card-content">
+          <div class="notititle">MENSUALIDADES</div>
+        </div>
+      </div>
+
       <div class="seccion-separador"></div>
 
       <div class="pagos__container">
 
         <!-- Paquete Individual -->
         <article class="pago__card">
-          <i class="fas fa-user pago__icon"></i>
+          <p class="price">$800</p>
           <h3 class="pago__title">Individual</h3>
-          <p>1 socio</p>
-          <p>20 SESIONES AL MES</p>
-          <p>Horario a elegir:</p>
-          <p>A. Físico, Muay Thai, Kick Boxing, MMA</p>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>1 Socio</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>20 Sesiones al mes</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración 1 hora</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Físico, Kick Boxing, Muay Thai, MMA</span>
+            </li>
+          </ul>
 
-          <p class="pago__botones-label">Elige cómo pagar</p>
           <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Mensualidad Individual — $800 MXN')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $800
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Mensualidad Individual — $800 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_INDIVIDUAL', 'Mensualidad Individual — $800 MXN')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $800
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Mensualidad Individual — $800 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
             </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Mensualidad Individual', '800')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Mensualidad Individual', '800')">
+              <i class="fas fa-university"></i> SPEI
             </button>
           </div>
         </article>
 
         <!-- Paquete Flexible -->
         <article class="pago__card">
-          <i class="fas fa-handshake pago__icon"></i>
+          <p class="price">$500</p>
           <h3 class="pago__title">Flexible</h3>
-          <p>1 socio</p>
-          <p>6 SESIONES AL MES</p>
-          <p>Horario a elegir:</p>
-          <p>A. Físico, Muay Thai, Kick Boxing, MMA</p>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>1 Socio</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>8 Sesiones al mes</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración 1 hora</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Físico, Kick Boxing, Muay Thai, MMA</span>
+            </li>
+          </ul>
 
-          <p class="pago__botones-label">Elige cómo pagar</p>
           <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Mensualidad Flexible — $400 MXN')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $400
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Mensualidad Flexible — $500 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_FLEXIBLE', 'Mensualidad Flexible — $400 MXN')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $400
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Mensualidad Flexible — $500 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
             </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Mensualidad Flexible', '400')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Mensualidad Flexible', '500')">
+              <i class="fas fa-university"></i> SPEI
+            </button>
+          </div>
+        </article>
+
+        <!-- Paquete De Vez en Mes -->
+        <article class="pago__card">
+          <p class="price">$300</p>
+          <h3 class="pago__title">De Vez En Mes</h3>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>1 Socio</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>4 Sesiones al mes</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración 1 hora</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Físico, Kick Boxing, Muay Thai, MMA</span>
+            </li>
+          </ul>
+
+          <div class="pago__botones">
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Mensualidad De Vez En Mes — $300 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Mensualidad De Vez En Mes — $300 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
+            </button>
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Mensualidad De Vez En Mes', '300')">
+              <i class="fas fa-university"></i> SPEI
             </button>
           </div>
         </article>
 
         <!-- Paquete Pareja -->
         <article class="pago__card">
-          <i class="fas fa-user-friends pago__icon"></i>
+          <p class="price">$1,400</p>
           <h3 class="pago__title">Pareja / Amigo</h3>
-          <p>2 socios</p>
-          <p>20 SESIONES AL MES C/U</p>
-          <p>Horario a elegir:</p>
-          <p>A. Físico, Muay Thai, Kick Boxing, MMA</p>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>2 Socios</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>20 Sesiones al mes c/u</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración 1 hora</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Físico, Kick Boxing, Muay Thai, MMA</span>
+            </li>
+          </ul>
 
-          <p class="pago__botones-label">Elige cómo pagar</p>
           <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Mensualidad Pareja/Amigo — $1,400 MXN')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $1,400
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Mensualidad Pareja/Amigo — $1,400 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_PAREJA', 'Mensualidad Pareja/Amigo — $1,400 MXN')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $1,400
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Mensualidad Pareja/Amigo — $1,400 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
             </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Mensualidad Pareja/Amigo', '1400')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Mensualidad Pareja/Amigo', '1400')">
+              <i class="fas fa-university"></i> SPEI
             </button>
           </div>
         </article>
 
       </div><!-- /pagos -->
-            </div><!-- /pagos -->
 
       <div class="efecto-glass">
         <h4>COSTO DE INSCRIPCION: $300</h4>
         <p>ACEPTAMOS TARJETA DE DEBITO, CREDITO Y SPEI</p>
         <p>CLASE POR HORA: $80.00</p>
+        <p>NOTA: Si deseas permanecer una hora adicional, tendrá un costo extra de $40 pesos.</p>
+        <p>La decisión de permanecer más tiempo en clase es voluntaria bajo responsabilidad personal.</p>
       </div>
     </section>
 
     <!-- ======== PERSONALIZADOS ======== -->
     <section class="section container" id="personalizados">
-      <h2 class="section__title">ENTRENAMIENTOS PERSONALIZADOS</h2>
+      <div class="card">
+        <div class="bg"></div>
+        <div class="blob"></div>
+        <div class="card-content">
+          <div class="notititle">ENTRENAMIENTOS PERSONALIZADOS</div>
+        </div>
+      </div>
+
       <div class="seccion-separador"></div>
 
       <div class="personalizados__container">
 
+        <!-- Plan Disciplina -->
         <article class="personalizados__card">
-          <i class="fas fa-running personalizados__icon"></i>
-          <h3 class="personalizados__title">Sesión Individual</h3>
-          <p>Para quienes buscan probar o entrenar de forma ocasional</p>
-          <p class="pago__botones-label">Elige cómo pagar</p>
+          <p class="price">$1,650</p>
+          <h3 class="personalizados__title">PLAN DISCIPLINA</h3>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>4 sesiones</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Técnica + acondicionamiento</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Ideal para comenzar tu proceso</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración: 1 mes</span>
+            </li>
+          </ul>
+
           <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Personalizado — Sesión Individual ($350 MXN)')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $350
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Personalizado Disciplina — $1,650 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_PERS1', 'Personalizado — Sesión Individual ($350 MXN)')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $350
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Personalizado Disciplina — $1,650 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
             </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Personalizado — Sesión Individual', '350')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Personalizado Disciplina', '1650')">
+              <i class="fas fa-university"></i> SPEI
             </button>
           </div>
         </article>
 
+        <!-- Plan Resultados -->
         <article class="personalizados__card">
-          <i class="fas fa-person-walking-luggage personalizados__icon"></i>
-          <h3 class="personalizados__title">4 Sesiones</h3>
-          <p>Entrena 1 vez por semana</p>
-          <p>Duración de 1 mes</p>
-          <p class="pago__botones-label">Elige cómo pagar</p>
+          <p class="price">$2,950</p>
+          <h3 class="personalizados__title">PLAN RESULTADOS</h3>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>8 sesiones</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Fuerza y condición física</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Progreso medible semanal</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración: 1 mes</span>
+            </li>
+          </ul>
+
           <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Personalizado — 4 Sesiones ($1,300 MXN)')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $1,300
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Personalizado Resultados — $2,950 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_PERS4', 'Personalizado — 4 Sesiones ($1,300 MXN)')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $1,300
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Personalizado Resultados — $2,950 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
             </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Personalizado — 4 Sesiones', '1300')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Personalizado Resultados', '2950')">
+              <i class="fas fa-university"></i> SPEI
             </button>
           </div>
         </article>
 
+        <!-- Plan Transformación -->
         <article class="personalizados__card">
-          <i class="fas fa-dumbbell personalizados__icon"></i>
-          <h3 class="personalizados__title">8 Sesiones</h3>
-          <p>2 veces por semana</p>
-          <p>Duración de 1 mes</p>
-          <p class="pago__botones-label">Elige cómo pagar</p>
-          <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Personalizado — 8 Sesiones ($2,400 MXN)')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $2,400
-            </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_PERS8', 'Personalizado — 8 Sesiones ($2,400 MXN)')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $2,400
-            </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Personalizado — 8 Sesiones', '2400')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
-            </button>
-          </div>
-        </article>
+          <p class="price">$3,950</p>
+          <h3 class="personalizados__title">PLAN TRANSFORMACIÓN</h3>
+          <ul class="lists">
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>12 sesiones</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>3 veces por semana</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Evolución física y técnica real</span>
+            </li>
+            <li class="list">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path d="M21.5821 5.54289C21.9726 5.93342 21.9726 6.56658 21.5821 6.95711L10.2526 18.2867C9.86452 18.6747 9.23627 18.6775 8.84475 18.293L2.29929 11.8644C1.90527 11.4774 1.89956 10.8443 2.28655 10.4503C2.67354 10.0562 3.30668 10.0505 3.70071 10.4375L9.53911 16.1717L20.1679 5.54289C20.5584 5.15237 21.1916 5.15237 21.5821 5.54289Z"></path></svg>
+              <span>Duración: 1 mes</span>
+            </li>
+          </ul>
 
-        <article class="personalizados__card">
-          <i class="fas fa-star personalizados__icon"></i>
-          <h3 class="personalizados__title">12 Sesiones</h3>
-          <p>3 veces por semana</p>
-          <p>Duración de 1 mes</p>
-          <p class="pago__botones-label">Elige cómo pagar</p>
           <div class="pago__botones">
-            <button class="btn-pago btn-whatsapp"
-              onclick="abrirModalPaquete('Personalizado — 12 Sesiones ($3,300 MXN)')">
-              <i class="fab fa-whatsapp"></i> WhatsApp — $3,300
+            <button class="btn-pago btn-whatsapp" onclick="abrirModalPaquete('Personalizado Transformación — $3,950 MXN')">
+              <i class="fab fa-whatsapp"></i> WhatsApp
             </button>
-            <button class="btn-pago btn-mercadopago"
-              onclick="pagarMP('https://mpago.la/TU_LINK_PERS12', 'Personalizado — 12 Sesiones ($3,300 MXN)')">
-              <i class="fas fa-credit-card"></i> MercadoPago — $3,300
+            <button class="btn-pago btn-mercadopago" onclick="pagarMP('https://link.mercadopago.com.mx/aztecamuaythai', 'Personalizado Transformación — $3,950 MXN')">
+              <i class="fas fa-credit-card"></i> MercadoPago
             </button>
-            <button class="btn-pago btn-spei"
-              onclick="abrirSPEI('Personalizado — 12 Sesiones', '3300')">
-              <i class="fas fa-university"></i> SPEI / Transferencia
+            <button class="btn-pago btn-spei" onclick="abrirSPEI('Personalizado Transformación', '3950')">
+              <i class="fas fa-university"></i> SPEI
             </button>
           </div>
         </article>
@@ -263,7 +371,7 @@
 
   </main><!-- /main -->
 
-  <!-- ======== FOOTER (igual que index.html) ======== -->
+  <!-- ======== FOOTER ======== -->
   <footer class="footer">
     <div class="footer__container container">
       <div class="footer__content">
@@ -285,75 +393,93 @@
         </div>
         <div class="footer__data footer__map">
           <h3 class="footer__title">Ubicación</h3>
-          <iframe src="https://maps.google.com/maps?q=Azteca+Thai+Boxing+Puebla&t=&z=13&ie=UTF8&iwloc=&output=embed" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://maps.google.com/maps?q=Azteca+Thai+Boxing+Puebla&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="150" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-      <p class="footer__copy">
-        © 2026 AZTECA THAI BOXING. Todos los derechos reservados.<br>
-        <span class="footer__dev">Desarrollado por
-          <a href="https://www.instagram.com/e1_tiger?igsh=MjYycWR2NG5lejJ4" target="_blank" rel="noopener noreferrer">Antonio Flores</a>
-        </span>
-      </p>
+      <p class="footer__copy">&#169; 2026 Azteca Thai Boxing. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- ======== MODAL WHATSAPP ======== -->
+  <!-- ======== MODALES ======== -->
+  <!-- Modal Inscripción WhatsApp -->
   <div id="modal-paquete" class="modal">
     <div class="modal-contenido">
       <span class="cerrar" onclick="cerrarModalPaquete()">×</span>
       <h3>Inscripción / Agendar</h3>
-      <p>Estás eligiendo: <strong id="paquete-nombre-modal" style="color:var(--main-red);"></strong></p>
+      <p>Estás eligiendo: <strong id="paquete-nombre-modal" style="color: var(--main-red);"></strong></p>
       <label for="nombre-paquete-cliente">Tu Nombre Completo:</label>
-      <input type="text" id="nombre-paquete-cliente" required placeholder="Ingresa tu nombre para el registro" />
+      <input type="text" id="nombre-paquete-cliente" required placeholder="Ingresa tu nombre para el registro">
       <button class="button" onclick="enviarWhatsAppPaquete()">
         <i class="fab fa-whatsapp"></i> Solicitar Info / Inscribirme
       </button>
     </div>
   </div>
 
-  <!-- ======== MODAL SPEI ======== -->
+  <!-- Modal SPEI -->
   <div id="modal-spei" class="modal">
     <div class="modal-contenido">
       <span class="cerrar" onclick="cerrarModalSPEI()">×</span>
-      <h3>Pago por SPEI / Transferencia</h3>
-      <p>Plan: <strong id="spei-plan-nombre" style="color:var(--main-red);"></strong></p>
-      <p style="margin:.25rem 0 1rem; font-size:.9rem; color:#888;">Monto: <strong id="spei-plan-monto" style="color:#fff;"></strong></p>
+      
+      <div class="spei-header">
+        <i class="fas fa-university"></i>
+        <h3>Transferencia SPEI</h3>
+      </div>
 
-      <div class="spei-datos">
-        <div class="spei-fila">
-          <span>Banco</span>
-          <span>Banorte</span>    <!-- ← ACTUALIZA con tu banco real -->
+      <div class="spei-card">
+        <div class="spei-row">
+          <span class="spei-label">Plan</span>
+          <span class="spei-value" id="spei-plan-nombre">---</span>
         </div>
-        <div class="spei-fila">
-          <span>Beneficiario</span>
-          <span>Enrique Cruz Osorio</span> <!-- ← ACTUALIZA con el nombre real -->
+        <div class="spei-row">
+          <span class="spei-label">Monto</span>
+          <span class="spei-value" id="spei-plan-monto">---</span>
         </div>
-        <div class="spei-fila">
-          <span>CLABE</span>
-          <span>
-            072650011700034374       <!-- ← ACTUALIZA con tu CLABE real -->
-            <button class="spei-copy-btn" id="btn-copy-clabe" onclick="copiarCLABE()">
-              <i class="fas fa-copy"></i> Copiar
-            </button>
-          </span>
+        <div class="spei-row">
+          <span class="spei-label">Concepto</span>
+          <span class="spei-value" id="spei-concepto">---</span>
         </div>
-        <div class="spei-fila">
-          <span>Concepto</span>
-          <span id="spei-concepto">—</span>
+        
+        <hr style="border: 0; border-top: 1px solid #333; margin: 1rem 0;">
+        
+        <div class="spei-row">
+          <span class="spei-label">Banco</span>
+          <span class="spei-value">BANORTE</span>
+        </div>
+        <div class="spei-row">
+          <span class="spei-label">Beneficiario</span>
+          <span class="spei-value">AZTECA THAI BOXING</span>
+        </div>
+        
+        <div class="spei-clabe-container">
+          <span class="spei-clabe-value">072650011700034374</span>
+          <button class="button button-small" id="btn-copy-clabe" onclick="copiarCLABE()" style="margin: 0; width: auto;">
+            <i class="fas fa-copy"></i>
+          </button>
         </div>
       </div>
 
-      <p class="spei-nota">
-        Después de tu transferencia, envíanos el comprobante por WhatsApp para confirmar tu lugar.
-      </p>
-
-      <a href="https://wa.me/5212226762422" target="_blank" class="button" style="text-decoration:none; display:flex; justify-content:center; gap:.5rem; margin-top:1rem;">
-        <i class="fab fa-whatsapp"></i> Enviar comprobante
-      </a>
+      <div class="spei-footer">
+        <p>Una vez realizado el pago, envía tu comprobante para activar tu plan.</p>
+        <button class="button" onclick="window.open('https://wa.me/5212226762422', '_blank')">
+          <i class="fab fa-whatsapp"></i> Enviar Comprobante
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- ======== SCRIPTS ======== -->
+  <script>
+    // Failsafe para el header en paquetes.html
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (header) {
+        if (window.scrollY >= 50) {
+          header.classList.add('scroll-header');
+        } else {
+          header.classList.remove('scroll-header');
+        }
+      }
+    });
+  </script>
   <script src="js/nav.js"></script>
   <script src="js/paquetes.js"></script>
 </body>

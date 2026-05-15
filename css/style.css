@@ -75,12 +75,54 @@ body {
     overflow-x: hidden;
 }
 
-/* Estilos de tipografía global */
-h1, h2, h3 {
-    color: var(--white-color);
-    font-family: var(--title-font);
-    letter-spacing: 1px;
+/* =========================================
+   TITULOS DE SECCIÓN (CAJA NEGRA PULSANTE)
+   ========================================= */
+.section-title-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
+
+.section-title-container .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.7rem 1.15rem;
+    border-radius: 4px;
+    z-index: 5;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    margin: 0 auto;
+    text-align: center;
+    background: #000000;
+    border: 1px solid var(--main-red);
+    animation: pulseBoxTitle 3s infinite ease-in-out;
+}
+
+@keyframes pulseBoxTitle {
+    0% { box-shadow: 0 4px 15px rgba(0,0,0,0.6); border-color: var(--main-red); }
+    50% { box-shadow: 0 0 20px rgba(255, 82, 82, 0.4); border-color: #ff7777; }
+    100% { box-shadow: 0 4px 15px rgba(0,0,0,0.6); border-color: var(--main-red); }
+}
+
+.notititle {
+    color: var(--main-red);
+    font-weight: 700;
+    font-size: clamp(1.2rem, 3.5vw, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+    text-shadow: none;
+    margin: 0;
+    z-index: 2;
+}
+
+.card .bg, .card .blob { display: none; } /* Simplified for index */
 
 ul { list-style: none; }
 a { text-decoration: none; }
@@ -125,7 +167,7 @@ img, video { max-width: 100%; height: auto; }
 }
 
 .scroll-header {
-    background-color: var(--dark-color);
+    background-color: #000000 !important;
     box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.3);
 }
 
@@ -616,6 +658,17 @@ img, video { max-width: 100%; height: auto; }
 .cita__card { padding: 2rem; }
 
 .cita__description { margin-bottom: 1.5rem; }
+
+/* Icono principal en cada tarjeta de cita (aumentar tamaño) */
+.cita__card > i.fa-solid,
+.cita__card > img.cita__icon {
+    display: block;
+    margin: 0.75rem auto;
+}
+
+/* Tamaños por defecto (ajustables) */
+.cita__card > i.fa-solid { font-size: 3.5rem; }
+.cita__card > img.cita__icon { width: 56px; height: 56px; object-fit: contain; }
 
 .cita__contact {
     display: flex;

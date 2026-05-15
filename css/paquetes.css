@@ -260,7 +260,7 @@
 }
 
 .efecto-glass {
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
@@ -268,8 +268,11 @@
   padding: 25px 20px;
   color: #ffffff;
   text-align: center;
-  width: 90%;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
   margin: 20px auto;
+  box-sizing: border-box;
 }
 
 .efecto-glass h4 {
@@ -308,4 +311,246 @@
 
 .efecto-glass__list li::before {
   content: "\2022 ";
+}
+
+/* Section separators and glass effects */
+.seccion-separador {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, transparent, #ff5252 20%, #ff5252 80%, transparent);
+  margin: 2rem auto 2.5rem;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(255, 82, 82, 0.3);
+  animation: pulseWidth 3s ease-in-out infinite;
+}
+
+
+#mensualidades .card,
+#personalizados .card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.7rem 1.15rem;
+  border-radius: 4px;
+  z-index: 5; /* Lower than header (100) */
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  margin: 20px auto;
+  text-align: center;
+  background: #000000;
+  border: 1px solid var(--main-red);
+  animation: pulseBox 3s infinite ease-in-out;
+}
+
+@keyframes pulseBox {
+  0% { box-shadow: 0 4px 15px rgba(0,0,0,0.6); border-color: var(--main-red); }
+  50% { box-shadow: 0 0 20px rgba(255, 82, 82, 0.4); border-color: #ff7777; }
+  100% { box-shadow: 0 4px 15px rgba(0,0,0,0.6); border-color: var(--main-red); }
+}
+
+#mensualidades .notititle,
+#personalizados .notititle {
+  color: var(--main-red);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  text-shadow: none;
+  margin: 0;
+  z-index: 2;
+}
+
+/* -----------------------------------------
+   NEW CARD DESIGN (UIVERSE ADAPTATION)
+   ----------------------------------------- */
+.pago__card,
+.personalizados__card {
+  background-color: #111111;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pago__card:hover,
+.personalizados__card:hover {
+  border-color: var(--main-red);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.pago__card .price,
+.personalizados__card .price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.pago__card .pago__title,
+.personalizados__card .personalizados__title {
+  font-size: 1.5rem;
+  color: var(--main-red);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pago__card .lists,
+.personalizados__card .lists {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.pago__card .list,
+.personalizados__card .list {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.pago__card .list svg,
+.personalizados__card .list svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pago__card .list svg path,
+.personalizados__card .list svg path {
+  fill: var(--main-red);
+}
+
+.pago__card .pago__botones,
+.personalizados__card .pago__botones {
+  margin-top: auto;
+  gap: 0.6rem;
+}
+
+
+/* -----------------------------------------
+   MODAL SPEI MODERNO
+   ----------------------------------------- */
+#modal-spei .modal-contenido {
+  max-width: 450px;
+  background-color: #111111;
+  border: 1px solid #333;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+.spei-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.spei-header i {
+  font-size: 3rem;
+  color: var(--main-red);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.spei-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.spei-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.spei-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 82, 82, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.spei-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.spei-row:last-child { margin-bottom: 0; }
+
+.spei-label {
+  color: #666;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.spei-value {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.spei-clabe-container {
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px dashed #444;
+}
+
+.spei-clabe-value {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: var(--main-red);
+  font-weight: 700;
+}
+
+.spei-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.spei-footer p { margin-bottom: 1.5rem; }
+
+#btn-copy-clabe.copiado {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
 }
