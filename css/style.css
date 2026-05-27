@@ -100,7 +100,7 @@ body {
     margin: 0 auto;
     text-align: center;
     background: #000000;
-    border: 1px solid var(--main-red);
+    border: 1px solid var(--main-white-color);
     animation: pulseBoxTitle 3s infinite ease-in-out;
 }
 
@@ -111,7 +111,7 @@ body {
 }
 
 .notititle {
-    color: var(--main-red);
+    color: var(--main-white-color);
     font-weight: 700;
     font-size: clamp(1.2rem, 3.5vw, 2rem);
     text-transform: uppercase;
