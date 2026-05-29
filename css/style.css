@@ -128,67 +128,11 @@ ul { list-style: none; }
 a { text-decoration: none; }
 img, video { max-width: 100%; height: auto; }
 
-/* =========================================
-   RESPONSIVE ADJUSTMENTS (MOBILE FIRST)
-   ========================================= */
-
-/* Section titles responsive */
-@media screen and (max-width: 576px) {
-    .section-title-container .card {
-        padding: 0.5rem 0.8rem;
-        width: 90%;
-    }
-    
-    .notititle {
-        font-size: clamp(1rem, 4.5vw, 1.3rem);
-        letter-spacing: 0.05em;
-    }
-}
-
-/* Contact Cards (Citas) Responsive */
-.citas__container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-@media screen and (max-width: 768px) {
-    .cita__card {
-        padding: 1.5rem;
-        text-align: center;
-    }
-    
-    .cita__contact {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-    
-    .button-contact {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-/* Modal Responsive Fixes */
-@media screen and (max-width: 480px) {
-    .modal-contenido {
-        width: 95%;
-        margin: 10% auto;
-        padding: 1.5rem;
-    }
-    
-    .modal-contenido h3 {
-        font-size: 1.2rem;
-    }
-}
-
-/* Tienda Grid Fix */
-@media screen and (max-width: 576px) {
-    .tienda__container {
-        grid-template-columns: 1fr;
-    }
-    
-    .producto__card {
-        padding: 1rem;
-    }
+/* Contenedores y espaciados generales */
+.container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .grid {
