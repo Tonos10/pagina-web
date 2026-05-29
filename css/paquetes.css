@@ -554,3 +554,22 @@
   background-color: #28a745 !important;
   border-color: #28a745 !important;
 }
+/* =========================================
+   CORRECCIÓN DE TAMAÑO DE CARDS EN ESCRITORIO
+   ========================================= */
+@media screen and (min-width: 992px) {
+  .pagos__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .personalizados__container {
+    display: grid;
+    /* Obligamos a que el ancho de estas 3 tarjetas sea exactamente 
+       igual al de las 4 tarjetas de arriba, y las centramos */
+    grid-template-columns: repeat(3, calc((100% - 4.5rem) / 4));
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
