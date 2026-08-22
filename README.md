@@ -2,6 +2,12 @@
 
 Sitio web estático para Azteca Thai Boxing con páginas informativas y de pago en línea.
 
+## Sitio en producción
+
+El sitio está publicado en:
+
+- https://aztecathaiboxing.com/index.html
+
 ## Estructura del proyecto
 
 - `index.html`: página principal.
